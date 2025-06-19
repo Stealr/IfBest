@@ -1,35 +1,39 @@
 /* бета тест цветов*/
-
+@use './variables' as *;
 
 :root {
     --global-scale: 62.5%;
 
-    /* Светлая тема */
-    --background: #f8f8f8;
-    --text-field: #ffffff;
-    --drag-drop: #f2f2f2;
-    --border: rgba(0, 0, 0, 0.28);
-    --transparency-main-text: rgba(0, 0, 0, 0.5);
-    --header: #ffffff;
-    --scrollbar: #e0e0e0;
-    --text-color: #000000;
-    --additional-text: #afb0b1;
-
     /* Общие переменные */
-    --black-text: #000000;
-    --red-button: #f23541;
-    --hovering-red-button: #dc2c35;
+    --red-button: #{$red-button};
+    --hovering-red-button: #{$hovering-red-button};
+    --loading-bar: #{$loading-bar};
+
+    /* Светлая тема */
+    --background: #{$background-light};
+    --text-field: #{$text-field-light};
+    --drag-drop: #{$drag-drop-light};
+    --border: #{$border-light};
+    --transparency-main-text: #{$transparency-main-text-light};
+    --header: #{$header-light};
+    --scrollbar: #{$scrollbar-light};
+    --text-color: #{$black1-text};
+    --additional-text: #{$additional-text};
+
+    --search-color: var(--loading-bar);
 }
 
 /* Темная тема */
 body.theme-dark {
-    --background: #363636;
-    --text-field: #3e3e3e;
-    --drag-drop: #585858;
-    --border: rgba(255, 255, 255, 0.2);
-    --transparency-main-text: rgba(255, 255, 255, 0.7);
-    --header: #2e2e2e;
-    --scrollbar: #9f9f9f;
-    --text-color: #ffffff;
-    --additional-text: #afb0b1;
+    --background: #{$background-dark};
+    --text-field: #{$text-field-dark};
+    --drag-drop: #{$drag-drop-dark};
+    --border: #{$border-dark};
+    --transparency-main-text: #{$transparency-main-text-dark};
+    --header: #{$header-dark};
+    --scrollbar: #{$scrollbar-dark};
+    --text-color: #{$white1-text};
+    --additional-text: #{$additional-text};
+
+    --search-color: var(--text-field);
 }
