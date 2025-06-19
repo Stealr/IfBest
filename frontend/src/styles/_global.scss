@@ -8,6 +8,8 @@ html {
 
 body {
     @include f.body1-medium;
+
+    background-color: var(--background);
 }
 
 .app {

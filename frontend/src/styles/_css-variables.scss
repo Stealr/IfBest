@@ -1,3 +1,35 @@
+/* бета тест цветов*/
+
+
 :root {
-  --global-scale: 62.5%;
+    --global-scale: 62.5%;
+
+    /* Светлая тема */
+    --background: #f8f8f8;
+    --text-field: #ffffff;
+    --drag-drop: #f2f2f2;
+    --border: rgba(0, 0, 0, 0.28);
+    --transparency-main-text: rgba(0, 0, 0, 0.5);
+    --header: #ffffff;
+    --scrollbar: #e0e0e0;
+    --text-color: #000000;
+    --additional-text: #afb0b1;
+
+    /* Общие переменные */
+    --black-text: #000000;
+    --red-button: #f23541;
+    --hovering-red-button: #dc2c35;
+}
+
+/* Темная тема */
+body.theme-dark {
+    --background: #363636;
+    --text-field: #3e3e3e;
+    --drag-drop: #585858;
+    --border: rgba(255, 255, 255, 0.2);
+    --transparency-main-text: rgba(255, 255, 255, 0.7);
+    --header: #2e2e2e;
+    --scrollbar: #9f9f9f;
+    --text-color: #ffffff;
+    --additional-text: #afb0b1;
 }
