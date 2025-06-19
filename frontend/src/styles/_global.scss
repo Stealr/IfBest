@@ -1,0 +1,15 @@
+@use './variables' as *;
+@use './mixins' as m;
+
+html {
+  font-size: var(--global-scale);
+}
+
+.main {
+    @include m.container;
+}
+
+input, button, textarea {
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}

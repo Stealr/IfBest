@@ -1,0 +1,24 @@
+$media-sizes: (
+  "xs": 480px,
+  "s": 640px,
+  "sm": 800px,
+  "m": 900px,
+  "l": 1150px,
+  "xl": 1350px,
+  "2xl": 1550px,
+);
+
+// $font-main: "Rubik", sans-serif;
+
+// Модульная сетка
+$mobile-fields: 30px;
+$max-width-container: (1438px - $mobile-fields); // Размер контента (поля)
+
+// header
+$height-header: 7.6rem;
+
+// footer
+$height-footer: 26.8rem;
+
+// Отступ сверху и снизу main контейнера
+$offset: 12rem;

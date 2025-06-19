@@ -1,0 +1,16 @@
+@use "./variables" as *;
+@use "sass:map";
+
+@mixin container {
+  margin: 0 auto;
+  padding: 0 $mobile-fields;
+  max-width: $max-width-container;
+}
+
+@mixin max-media($breakpoint) {
+  $size: map.get($media-sizes, $breakpoint);
+
+  @media (max-width: $size) {
+    @content;
+  }
+}
