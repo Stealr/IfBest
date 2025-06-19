@@ -1,5 +1,5 @@
 import './home.scss';
-import { useTest } from '@hooks/useTest/useTest.js';
+import { useTest } from '@hooks/useTest.js';
 
 function Home() {
     const { data, isLoading, isError, error } = useTest();
