@@ -14,7 +14,9 @@ function Home() {
 
     return (
         <div className="homepage">
-            <h1 className="homepage__header">home page</h1>
+            <h1 className="homepage__header title1-medium">title 1</h1>
+            <h2 className='title2-medium'>title 2</h2>
+            <p>testing</p>
             <p>{data?.fact}</p>
         </div>
     );

@@ -7,11 +7,20 @@ html {
 }
 
 body {
-  @include f.body1-medium;
+    @include f.body1-medium;
 }
 
-.main {
-    // @include m.container;
+.app {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'sidebar content';
+    grid-template-rows: $height-header 1fr;
+    grid-template-columns: $sidebar 1fr;
+    min-height: 100vh;
+}
+
+.content {
     padding: $top-offset $content-fields 0 $content-fields;
 }
 
@@ -42,6 +51,7 @@ textarea {
 .title1-small {
     @include f.title1-small;
 }
+
 .title2-small {
     @include f.title2-small;
 }
