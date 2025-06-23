@@ -1,44 +1,43 @@
 @use '@styles/mixins' as *;
 @use '@styles/variables' as *;
+@use '@styles/typography' as *;
 
 .card {
-  display: flex;
-  flex-direction: column;
-
-  .thumbnail {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 1.2rem;
-    background-color: #ccc;
-    object-fit: cover;
-  }
-
-  .content {
     display: flex;
-    margin-top: 8px;
+    flex-direction: column;
 
-    .avatar {
-      flex: none;
-      width: 40px;
-      height: 40px;
-      background-color: #bbb;
-      border-radius: 50%;
-      margin-right: 8px;
+    .thumbnail {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: $card-border-radius;
+        background-color: $thumbnail-background;
+        object-fit: cover;
     }
 
-    .title {
-      font-size: 16px;
-      font-weight: 600;
-    }
+    .content {
+        display: flex;
+        padding: $main-video-gap 0;
 
-    .channel {
-      font-size: 14px;
-      color: #555;
-    }
+        .avatar {
+            flex: none;
+            width: $avatar-size;
+            height: $avatar-size;
+            background-color: $thumbnail-background;
+            border-radius: 50%;
+            margin-right: $main-video-gap;
+        }
 
-    .meta {
-      font-size: 12px;
-      color: #777;
+        .channel {
+            @include title1-small;
+            color: #585858;
+            padding-top: 0.8rem;
+            padding-bottom: 0.4rem;
+
+        }
+
+        .meta {
+            @include title1-small;
+            color: #585858;
+        }
     }
-  }
 }

@@ -8,8 +8,8 @@ export const CardVideo = () => {
             <div className="content">
                 <div className="avatar"></div>
                 <div>
-                    <div className="title">
-                        Название видео какое-то интересное, на три строки и более оченьььь дли
+                    <div className="title title1-medium">
+                        Название видео какое-то интересное, на три строки и более оченьььь длиннннннннннннннннннноооооооооооооооооооооооооооо ооооооооооооооооеееееееееееееееееееееееееееееееееееееееееееееее
                     </div>
                     <div className="channel">Название канала</div>
                     <div className="meta">
