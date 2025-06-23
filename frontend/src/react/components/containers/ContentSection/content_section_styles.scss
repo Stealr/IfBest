@@ -1,0 +1,19 @@
+.section-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__title {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+
+    &__button {
+        border: 2px solid red;
+        border-radius: 2.5rem;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
