@@ -7,16 +7,12 @@ import { Outlet } from 'react-router-dom';
 const Layout = () => {
   return (
     <>
-      {/* <ScrollToTop /> */}
       {/* <Header /> */}
-      {/* <AsideBar /> */}
-      
-      {/* это заменить потом */}
-      <div className='Header' style={{gridArea: 'header'}}>header</div>
-      <div className='sidebar' style={{gridArea: 'sidebar'}}>sidebar</div>
-      <main className='content'>
+      {/* <ScrollToTop /> */}
+      <main className='main'>
         <Outlet /> 
       </main>
+      {/* <Footer /> */}
     </>
   );
 };
