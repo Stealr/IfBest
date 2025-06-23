@@ -11,3 +11,5 @@ function truncateText(text, maxLength) {
   const actualLength = Math.max(1, maxLength - 3);
   return text.substring(0, actualLength) + '...';
 }
+
+export default truncateText;
