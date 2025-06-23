@@ -1,0 +1,47 @@
+@use '@/styles/variables' as *;
+
+/* =====================================================
+   ARTICLE-GRID
+   ===================================================== */
+.article-grid {
+  display: flex;
+  column-gap: 1.6rem;   /* 16px между featured и колонками */
+  max-width: 134.3rem;  /* full layout */
+  margin-left: 0;       /* прижат к левому краю */
+
+  /* featured слева */
+  > .card-article--featured { flex-shrink: 0; width: 89.8rem; }
+
+  /* колонка compact */
+  &__col {
+    width: 43rem;           /* ширина compact+gap */
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+  }
+
+  /* ===== tablet ≤1024 ===== */
+  @media (max-width: 1024px) {
+    column-gap: 1.2rem;     /* чуть меньше зазор */
+
+    > .card-article--featured { width: auto; flex: 1; } /* big растягивается */
+
+    &__col { width: 43rem; } /* одна колонка остаётся справа */
+  }
+
+  /* ===== mobile ≤768 — опционально =====
+  @media (max-width: 768px) {
+    flex-direction: column;
+    row-gap: 1.6rem;
+
+    > .card-article--featured,
+    &__col { width: 100%; }
+  }
+  */
+}
+
+
+
+
+
+
