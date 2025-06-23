@@ -12,7 +12,7 @@ const SideBar = () => {
       <nav>
         <ul className="sidebar__list">
           {sidebarIcons.map((icon, index) => (
-            <SidebarItem key={index} icon={icon} />
+            <SidebarItem key={`sidebar-${index}`} icon={icon} />
           ))}
         </ul>
       </nav>
