@@ -1,0 +1,36 @@
+.section-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper-title {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.wrapper-button {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+    border-radius: 2.5rem;
+    font-size: 1rem;
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.button {
+    padding: 1rem;
+}
+
+.wrapper-button:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
