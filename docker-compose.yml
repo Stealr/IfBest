@@ -1,9 +1,0 @@
-services:
-  frontend:
-    build: ./frontend  
-    container_name: testDocker
-    ports:
-      - "5173:5173"
-    # volumes:
-    #   - .:/app  # Комментируем или удаляем эту строку
-    command: npm run dev -- --host 0.0.0.0
