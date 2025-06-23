@@ -8,12 +8,15 @@ html {
 
 body {
     @include f.body1-medium;
+
+    background-color: var(--background);
+    color: var(--text-color);
 }
 
 .app {
     display: grid;
     grid-template-areas:
-        'header header'
+        'sidebar header'
         'sidebar content';
     grid-template-rows: $height-header 1fr;
     grid-template-columns: $sidebar 1fr;

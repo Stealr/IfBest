@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { fetchTestData } from '@services/api/testApi/test';
+import { fetchTestData } from '@services/api/test';
 
 export const useTest = () => {
     return useQuery({
