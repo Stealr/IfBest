@@ -1,6 +1,7 @@
 import React from 'react';
 import './card_video.scss';
 
+
 export const CardVideo = () => {
     return (
         <div className="card">
@@ -9,7 +10,7 @@ export const CardVideo = () => {
                 <div className="avatar"></div>
                 <div>
                     <div className="title title1-medium">
-                        Название видео какое-то интересное, на три строки и более оченьььь длиннннннннннннннннннноооооооооооооооооооооооооооо ооооооооооооооооеееееееееееееееееееееееееееееееееееееееееееееее
+                        Название видео какое-то интересное, на три строки и более
                     </div>
                     <div className="channel">Название канала</div>
                     <div className="meta">

@@ -5,6 +5,7 @@
 .card {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 
     .thumbnail {
         width: 100%;
