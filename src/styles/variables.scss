@@ -1,0 +1,29 @@
+$media-sizes: (
+  // "xs": 480px,
+  // "s": 640px,
+  // "sm": 800px,
+  // "m": 900px,
+  "l": 1024px,
+  // "xl": 1350px,
+  "2xl": 1920px,
+);
+
+// $font-main: "Rubik", sans-serif;
+
+// Модульная сетка
+$content-fields: 1.6rem;
+// $max-width-content: (1438px);
+
+// header
+$height-header: 11.2rem;
+
+// sidebar
+$sidebar: 5.8rem;
+
+// Отступ сверху content
+$top-offset: 3rem;
+
+$card-border-radius: 1.2rem;
+
+$main-grid-gap: 1.5rem;
+$list-gap: 2rem;

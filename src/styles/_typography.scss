@@ -1,0 +1,163 @@
+$font-family-primary: 'Roboto', sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Headline 1 (Large / Primary)
+$headline1-font-size: 3.2rem;
+$headline1-line-height: 4rem;
+$headline1-font-weight: $font-weight-regular;
+$headline1-letter-spacing: 0;
+
+// Headline 2 (Large / pxphasized)
+$headline2-font-size: 3.2rem;
+$headline2-line-height: 4rem;
+$headline2-font-weight: $font-weight-medium;
+$headline2-letter-spacing: 0;
+
+// Title 1 (Medium / Primary)
+$title1-medium-font-size: 1.8rem;
+$title1-medium-line-height: 2.4rem;
+$title1-medium-font-weight: $font-weight-medium;
+$title1-medium-letter-spacing: 0.15px;
+
+// Title 1 (Small / Primary)
+$title1-small-font-size: 1.4rem;
+$title1-small-line-height: 2rem;
+$title1-small-font-weight: $font-weight-medium;
+$title1-small-letter-spacing: 0.1px;
+
+// Title 2 (Medium / pxphasized)
+$title2-medium-font-size: 1.8rem;
+$title2-medium-line-height: 2.4rem;
+$title2-medium-font-weight: $font-weight-bold;
+$title2-medium-letter-spacing: 0.15px;
+
+// Title 2 (Small / pxphasized)
+$title2-small-font-size: 1.4rem;
+$title2-small-line-height: 2rem;
+$title2-small-font-weight: $font-weight-bold;
+$title2-small-letter-spacing: 0.1px;
+
+// Label 1 (Large / Primary)
+$label1-large-font-size: 1.4rem;
+$label1-large-line-height: 2rem;
+$label1-large-font-weight: $font-weight-medium;
+$label1-large-letter-spacing: 0.1px;
+
+// Label 2 (Large / pxphasized)
+$label2-large-font-size: 1.4rem;
+$label2-large-line-height: 2rem;
+$label2-large-font-weight: $font-weight-bold;
+$label2-large-letter-spacing: 0.1px;
+
+// Body 1 (Medium / Primary)
+$body1-medium-font-size: 1.4rem;
+$body1-medium-line-height: 2rem;
+$body1-medium-font-weight: $font-weight-regular;
+$body1-medium-letter-spacing: 0.25px;
+
+// Body 2 (Medium / pxphasized)
+$body2-medium-font-size: 1.4rem;
+$body2-medium-line-height: 2rem;
+$body2-medium-font-weight: $font-weight-medium;
+$body2-medium-letter-spacing: 0.25px;
+
+@mixin typography-style($font-size, $line-height, $font-weight, $letter-spacing) {
+    font-family: $font-family-primary;
+    font-size: $font-size;
+    line-height: calc($line-height / $font-size);
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin headline1 {
+    @include typography-style(
+        $headline1-font-size,
+        $headline1-line-height,
+        $headline1-font-weight,
+        $headline1-letter-spacing
+    );
+}
+
+@mixin headline2 {
+    @include typography-style(
+        $headline2-font-size,
+        $headline2-line-height,
+        $headline2-font-weight,
+        $headline2-letter-spacing
+    );
+}
+
+@mixin title1-medium {
+    @include typography-style(
+        $title1-medium-font-size,
+        $title1-medium-line-height,
+        $title1-medium-font-weight,
+        $title1-medium-letter-spacing
+    );
+}
+
+@mixin title1-small {
+    @include typography-style(
+        $title1-small-font-size,
+        $title1-small-line-height,
+        $title1-small-font-weight,
+        $title1-small-letter-spacing
+    );
+}
+
+@mixin title2-medium {
+    @include typography-style(
+        $title2-medium-font-size,
+        $title2-medium-line-height,
+        $title2-medium-font-weight,
+        $title2-medium-letter-spacing
+    );
+}
+
+@mixin title2-small {
+    @include typography-style(
+        $title2-small-font-size,
+        $title2-small-line-height,
+        $title2-small-font-weight,
+        $title2-small-letter-spacing
+    );
+}
+
+@mixin label1-large {
+    @include typography-style(
+        $label1-large-font-size,
+        $label1-large-line-height,
+        $label1-large-font-weight,
+        $label1-large-letter-spacing
+    );
+}
+
+@mixin label2-large {
+    @include typography-style(
+        $label2-large-font-size,
+        $label2-large-line-height,
+        $label2-large-font-weight,
+        $label2-large-letter-spacing
+    );
+}
+
+@mixin body1-medium {
+    @include typography-style(
+        $body1-medium-font-size,
+        $body1-medium-line-height,
+        $body1-medium-font-weight,
+        $body1-medium-letter-spacing
+    );
+}
+
+@mixin body2-medium {
+    @include typography-style(
+        $body2-medium-font-size,
+        $body2-medium-line-height,
+        $body2-medium-font-weight,
+        $body2-medium-letter-spacing
+    );
+}
