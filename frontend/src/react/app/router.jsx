@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
-import Layout from '@components/containers/layout/Layout.jsx';
+import Layout from '@components/containers/Layout/Layout.jsx';
 
 const HomePage = lazy(() => import('./routes/Home/Home'));
 const NotFound = lazy(() => import('./routes/NotFound/NotFound'));
