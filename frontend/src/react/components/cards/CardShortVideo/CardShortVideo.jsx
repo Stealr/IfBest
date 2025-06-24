@@ -1,15 +1,16 @@
 import logo from '@assets/images/ellipsis.png';
+import './card-short-video.scss'
 
 const CardShortVideo = () => {
   return (
-    <li className="card">
-      <div className="card__img"></div>
-      <div className="card__bottom">
-        <div className="card__bottom-left">
-            <p className="card__title">Название видео какое-то...</p>
-            <span className="card__info">600 просмотров</span>
+    <li className="card-short-video">
+      <div className="card-short-video__img"></div>
+      <div className="card-short-video__bottom">
+        <div className="card-short-video__bottom-left">
+            <p className="card-short-video__title">Название видео какое-то...</p>
+            <span className="card-short-video__info">600 просмотров</span>
         </div>
-        <img className="card__icon" src={logo} width={22} height={22} alt="Logo" />
+        <img className="card-short-video__icon" src={logo} width={22} height={22} alt="Logo" />
       </div>
     </li>
   );
