@@ -1,5 +1,6 @@
+import { CardVideo } from '@components/cards/CardVideo/CardVideo.jsx';
+import MainGrid from '@components/contentLayouts/MainGrid/MainGrid';
 import './home.scss';
-// import { useTest } from '@hooks/useTest.js';
 
 function Home() {
     // const { data, isLoading, isError, error } = useTest();
@@ -14,6 +15,11 @@ function Home() {
 
     return (
         <div className="homepage">
+            <MainGrid>
+                {Array.from({ length: 6 }, (_, index) => (
+                    <CardVideo key={index} />
+                ))}
+            </MainGrid>
             {/* <h1 className="homepage__header title1-medium">title 1</h1>
             <h2 className='title2-medium'>title 2</h2>
             <p>testing</p>

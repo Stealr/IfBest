@@ -1,0 +1,16 @@
+@use '@styles/mixins' as *;
+@use '@styles/variables' as *;
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    // @include max-media('2xl') {
+    //     grid-template-columns: repeat(4, 1fr);
+    // }
+
+    // @include max-media('l') {
+    //     grid-template-columns: repeat(3, 1fr);
+    // }
+}
