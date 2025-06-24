@@ -4,7 +4,7 @@ $media-sizes: (
   // "sm": 800px,
   // "m": 900px,
   "l": 1024px,
-  // "xl": 1350px,
+  "xl": 1350px,
   "2xl": 1920px,
 );
 
@@ -27,3 +27,39 @@ $card-border-radius: 1.2rem;
 
 $main-grid-gap: 1.5rem;
 $list-gap: 2rem;
+
+// Отступы в карточке видео
+$main-video-gap: 1.2rem;
+$avatar-size: 4.8rem;
+$thumbnail-background: #DBDCDD;
+
+// цвета
+$background-dark: #363636;
+$background-light: #F8F8F8;
+
+$text-field-dark: #3E3E3E;
+$text-field-light: #FFFFFF;
+
+$drag-drop-dark: #585858;
+$drag-drop-light: #F2F2F2;
+
+$border-dark: rgba(255, 255, 255, 0.2);
+$border-light: rgba(0, 0, 0, 0.28);
+
+$transparency-main-text-dark: rgba(255, 255, 255, 0.7);
+$transparency-main-text-light: rgba(0, 0, 0, 0.5);
+
+$black1-text: #000000;
+$white1-text: #FFFFFF;
+
+$header-dark: #2E2E2E;
+$header-light: #ffffff; // потом надо поменять
+
+$scrollbar-dark: #9F9F9F;
+$scrollbar-light: #9F9F9F; // потом надо поменять
+
+// без пары :(
+$loading-bar: #363636;
+$additional-text: #AFB0B1; // потом добавить пару
+$red-button: #F23541;
+$hovering-red-button: #CD2C35;

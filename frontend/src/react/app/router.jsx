@@ -11,24 +11,25 @@ const NotFound = lazy(() => import('./routes/NotFound/NotFound'));
 //! Надо будет посмотреть насколко велика проблема и переписать роутер на предзагрузку данных через loaders
 
 export const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />, // Layout это обертка с header и footer
-    children: [
-      {
-        index: true,
-        element: <HomePage />,
-      },
+    {
+        path: '/',
+        element: <Layout />, // Layout это обертка с header и footer
+        children: [
+            {
+                index: true,
+                element: <HomePage />,
+            },
 
-      // {
-      //   path: '/route',
-      //   element: <Page />,
-      // },
+            // {
+            //   path: '/route',
+            //   element: <Page />,
+            // },
 
-      {
-        path: '*', // 404 route
-        element: <NotFound />,
-      },
-    ],
-  },
+            {
+                path: '*', // 404 route
+                element: <NotFound />,
+            },
+        ],
+    },
 ]);
+
