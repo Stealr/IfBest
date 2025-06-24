@@ -1,0 +1,49 @@
+.card-short-video {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  &__img {
+    background: #DBDCDD;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.2rem;
+    aspect-ratio: 116/167;
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 6px;
+    justify-content: space-between;
+  }
+
+  &__bottom-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__title {
+    color: #000000;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+  }
+
+  &__info {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #606060;
+    font-weight: 500;
+  }
+}
