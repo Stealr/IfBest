@@ -2,8 +2,8 @@ import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
 import Layout from '@components/containers/layout/Layout.jsx';
-// import { CardVideo } from '@components/contentLayouts/CardVideo/CardVideo.jsx';
-// import MainGrid from '../components/contentLayouts/MainGrid/MainGrid';
+import { CardVideo } from '@components/cards/CardVideo/CardVideo.jsx';
+import MainGrid from '../components/contentLayouts/MainGrid/MainGrid';
 
 const HomePage = lazy(() => import('./routes/Home/Home'));
 const NotFound = lazy(() => import('./routes/NotFound/NotFound'));
@@ -28,25 +28,25 @@ export const router = createBrowserRouter([
             // },
 
             // ТЕСТ СЕТКИ
-            // {
-            //     path: '/video',
-            //     element: <MainGrid>
-            //       <CardVideo/>
-            //       <CardVideo/>
-            //       <CardVideo/>
-            //       <CardVideo/>
-            //       <CardVideo/>
-            //       <CardVideo/>
-            //       <CardVideo/>
-            //       <CardVideo/>
-            //       <CardVideo/>
-            //       <CardVideo/>
-            //       <CardVideo/>
-            //       <CardVideo/>
-            //       <CardVideo/>
-            //       <CardVideo/>
-            //     </MainGrid>,
-            // },
+            {
+                path: '/video',
+                element: <MainGrid>
+                  <CardVideo/>
+                  <CardVideo/>
+                  <CardVideo/>
+                  <CardVideo/>
+                  <CardVideo/>
+                  <CardVideo/>
+                  <CardVideo/>
+                  <CardVideo/>
+                  <CardVideo/>
+                  <CardVideo/>
+                  <CardVideo/>
+                  <CardVideo/>
+                  <CardVideo/>
+                  <CardVideo/>
+                </MainGrid>,
+            },
             {
                 path: '*', // 404 route
                 element: <NotFound />,

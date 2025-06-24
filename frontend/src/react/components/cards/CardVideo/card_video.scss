@@ -2,12 +2,12 @@
 @use '@styles/variables' as *;
 @use '@styles/typography' as *;
 
-.card {
+.card-video {
     display: flex;
     flex-direction: column;
     min-width: 0;
 
-    .thumbnail {
+    &__thumbnail {
         width: 100%;
         aspect-ratio: 16 / 9;
         border-radius: $card-border-radius;
@@ -15,11 +15,11 @@
         object-fit: cover;
     }
 
-    .content {
+    &__content {
         display: flex;
         padding: $main-video-gap 0;
 
-        .avatar {
+        &__avatar {
             flex: none;
             width: $avatar-size;
             height: $avatar-size;
@@ -28,16 +28,14 @@
             margin-right: $main-video-gap;
         }
 
-        .channel {
-            @include title1-small;
+        &__channel {
             color: #585858;
             padding-top: 0.8rem;
             padding-bottom: 0.4rem;
 
         }
 
-        .meta {
-            @include title1-small;
+        &__meta {
             color: #585858;
         }
     }
