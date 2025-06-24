@@ -1,5 +1,6 @@
 import { CardVideo } from '@components/cards/CardVideo/CardVideo.jsx';
 import MainGrid from '@components/contentLayouts/MainGrid/MainGrid';
+import CardList from '@components/contentLayouts/CardList/CardList';
 import './home.scss';
 
 function Home() {
@@ -20,6 +21,14 @@ function Home() {
                     <CardVideo key={index} />
                 ))}
             </MainGrid>
+            <CardList typeCard={'video'} />
+            <MainGrid>
+                {Array.from({ length: 6 }, (_, index) => (
+                    <CardVideo key={index} />
+                ))}
+            </MainGrid>
+            <CardList typeCard={'audio'} />
+            
             {/* <h1 className="homepage__header title1-medium">title 1</h1>
             <h2 className='title2-medium'>title 2</h2>
             <p>testing</p>
