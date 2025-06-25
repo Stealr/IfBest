@@ -1,20 +1,20 @@
 // src/react/components/ui/Header/Header.jsx
 import React from 'react';
 import './header.scss';
-import Logo from '@assets/svg/header/лого.svg?react';
-import SearchIcon from '@assets/svg/header/Search.svg?react';
-import ButtonDefault from '@assets/svg/header/Button_default.svg?react';
-import ButtonHover from '@assets/svg/header/Button_hover.svg?react';
+import Logo from '@assets/svg/лого.svg?react';
+import SearchIcon from '@assets/svg/Search.svg?react';
+import ButtonDefault from '@assets/svg/Button_default.svg?react';
+import ButtonHover from '@assets/svg/Button_hover.svg?react';
 
 
-import TagAll from '@assets/svg/header/Тег_Все.svg?react';
-import TagLearning from '@assets/svg/header/Тег_Обучение.svg?react';
-import TagCraft from '@assets/svg/header/Тег_Рукоделие.svg?react';
-import TagBeauty from '@assets/svg/header/Тег_Красота.svg?react';
-import TagSport from '@assets/svg/header/Тег_Спорт.svg?react';
-import TagCanada from '@assets/svg/header/Тег_Канада.svg?react';
-import TagRecipes from '@assets/svg/header/Тег_Рецепты.svg?react';
-import TagTrains from '@assets/svg/header/Тег_Поезда.svg?react';
+import TagAll from '@assets/svg/Тег_Все.svg?react';
+import TagLearning from '@assets/svg/Тег_Обучение.svg?react';
+import TagCraft from '@assets/svg/Тег_Рукоделие.svg?react';
+import TagBeauty from '@assets/svg/Тег_Красота.svg?react';
+import TagSport from '@assets/svg/Тег_Спорт.svg?react';
+import TagCanada from '@assets/svg/Тег_Канада.svg?react';
+import TagRecipes from '@assets/svg/Тег_Рецепты.svg?react';
+import TagTrains from '@assets/svg/Тег_Поезда.svg?react';
 
 const Header = () => {
   const tags = [
