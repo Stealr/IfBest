@@ -1,3 +1,4 @@
+import ArticleGrid from "@components/ContentLayouts/ArticleGrid/ArticleGrid"
 import './home.scss';
 // import { useTest } from '@hooks/useTest.js';
 
@@ -14,6 +15,7 @@ function Home() {
 
     return (
         <div className="homepage">
+            <ArticleGrid />
             {/* <h1 className="homepage__header title1-medium">title 1</h1>
             <h2 className='title2-medium'>title 2</h2>
             <p>testing</p>

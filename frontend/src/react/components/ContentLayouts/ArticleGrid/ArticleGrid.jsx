@@ -18,7 +18,7 @@ export default function ArticleGrid() {
     <section className="article-grid">
       <CardArticle {...featured} variant="featured" />
       {compactCards.map((a) => (
-        <CardArticle key={a.id} {...a} variant="compact" />
+        <CardArticle key={`articleCard${a.id}`} {...a} variant="compact" />
       ))}
     </section>
   );

@@ -1,6 +1,6 @@
-import featuredImg from '@assets/images/featured.jpg';
-import avatar      from '@assets/images/avatar.jpg';
-import thumb1      from '@assets/images/sample1.jpg';
+// import featuredImg from '@assets/images/featured.png';
+// import avatar      from '@assets/images/avatar.png';
+// import thumb1      from '@assets/images/sample1.jpeg';
 
 /**
  * @typedef {Object} Article
@@ -20,52 +20,52 @@ export default [
   {
     id: 1,
     variant: 'featured',
-    image: featuredImg,
+    // image: featuredImg,
     title: 'Название видео какое‑то интересное, длинное, здоровское…',
     text:  'Lorem ipsum dolor sit amet consectetur. Scelerisque quam tristique fermentum in morbi...',
     author: 'Название канала',
-    avatar,
+    // avatar,
     views: 600,
     date:  '1 месяц назад',
   },
   {
     id: 2,
-    image: thumb1,
+    // image: thumb1,
     title: 'Название видео какое‑то…',
     author: 'Автор',
     date:  '1 месяц назад',
   },
   {
     id: 3,
-    image: thumb1,
+    // image: thumb1,
     title: 'Название видео какое‑то…',
     author: 'Автор',
     date:  '1 месяц назад',
   },
   {
     id: 4,
-    image: thumb1,
+    // image: thumb1,
     title: 'Название видео какое‑то…',
     author: 'Автор',
     date:  '1 месяц назад',
   },
   {
     id: 5,
-    image: thumb1,
+    // image: thumb1,
     title: 'Название видео какое‑то…',
     author: 'Автор',
     date:  '1 месяц назад',
   },
   {
     id: 6,
-    image: thumb1,
+    // image: thumb1,
     title: 'Название видео какое‑то…',
     author: 'Автор',
     date:  '1 месяц назад',
   },
   {
     id: 7,
-    image: thumb1,
+    // image: thumb1,
     title: 'Название видео какое‑то…',
     author: 'Автор',
     date:  '1 месяц назад',

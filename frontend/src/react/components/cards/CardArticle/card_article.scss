@@ -20,8 +20,10 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
-    background: center/cover no-repeat;
+    
+    // временно заменил на цвет, потом убрать
+    // background: center/cover no-repeat;
+    background-color: #DBDCDD;
     flex-grow: 1;
     border-radius: 1.6rem;
     overflow: hidden;
