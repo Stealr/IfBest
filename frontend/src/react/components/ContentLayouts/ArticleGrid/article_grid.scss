@@ -1,0 +1,42 @@
+@use '@/styles/variables' as *;
+
+/* =====================================================
+   ARTICLE-GRID (единая CSS Grid-сетка)
+   ===================================================== */
+.article-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(2, minmax(min-content, 425px));
+  grid-template-rows: repeat(3, auto); /* теперь 3 строки */
+  column-gap: 1.6rem;
+  row-gap: 1.6rem;
+
+  > .card-article--featured {
+    grid-row: 1 / span 3; /* занимает все 3 строки */
+    grid-column: 1 / 2;
+    flex-grow: 1;
+    height: 100%;
+  }
+
+  > .card-article--compact {
+    flex-grow: 1;
+  }
+
+  /* ===== адаптация: с 1440px — только 1 колонка compact-карточек ===== */
+  @media (max-width: 1440px) {
+    grid-template-columns: 2fr minmax(min-content, 425px);
+    grid-template-rows: repeat(6, auto); /* одна колонка, 6 карточек вниз */
+
+    > .card-article--compact:nth-of-type(n + 7) {
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
