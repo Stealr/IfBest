@@ -1,3 +1,39 @@
+/* бета тест цветов*/
+@use './variables' as *;
+
 :root {
-  --global-scale: 62.5%;
+    --global-scale: 62.5%;
+
+    /* Общие переменные */
+    --red-button: #{$red-button};
+    --hovering-red-button: #{$hovering-red-button};
+    --loading-bar: #{$loading-bar};
+
+    /* Светлая тема */
+    --background: #{$background-light};
+    --text-field: #{$text-field-light};
+    --drag-drop: #{$drag-drop-light};
+    --border: #{$border-light};
+    --transparency-main-text: #{$transparency-main-text-light};
+    --header: #{$header-light};
+    --scrollbar: #{$scrollbar-light};
+    --text-color: #{$black1-text};
+    --additional-text: #{$additional-text};
+
+    --search-color: var(--loading-bar);
+}
+
+/* Темная тема */
+body.theme-dark {
+    --background: #{$background-dark};
+    --text-field: #{$text-field-dark};
+    --drag-drop: #{$drag-drop-dark};
+    --border: #{$border-dark};
+    --transparency-main-text: #{$transparency-main-text-dark};
+    --header: #{$header-dark};
+    --scrollbar: #{$scrollbar-dark};
+    --text-color: #{$white1-text};
+    --additional-text: #{$additional-text};
+
+    --search-color: var(--text-field);
 }
