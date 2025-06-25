@@ -1,34 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './wrapper_style.css'; // Импортируем стили
+import './content_section_styles.scss';
+import MoreBtn from './components/inputs/MoreBtn/MoreBtn';
 
-const SectionWrapper = ({ title, buttonText, buttonHref, children }) => {
+const SectionWrapper = ({ title, linkTo, children }) => {
   return (
     <div className="section-wrapper">
-      {title && <div className="section-wrapper__title">{title}</div>}
-      
-      {children}
-      
-      {buttonText && (
-        <a href={buttonHref || '#'} className="section-wrapper__button">
-          {buttonText}
-        </a>
-      )}
+      <div className="section-wrapper__content">
+        {title && <div className="section-wrapper__title">{title}</div>}
+        {children}
+      </div>
+
+      <MoreBtn 
+        to={linkTo} 
+        className="section-wrapper__link">
+      </MoreBtn>
     </div>
   );
 };
 
-// Пропсы по умолчанию
 SectionWrapper.defaultProps = {
-  buttonText: 'Смотреть больше',
-  buttonHref: '#'
+  linkTo: '#'
 };
 
-// Проверка типов пропсов
 SectionWrapper.propTypes = {
   title: PropTypes.string,
-  buttonText: PropTypes.string,
-  buttonHref: PropTypes.string,
+  linkTo: PropTypes.string,
   children: PropTypes.node
 };
 
