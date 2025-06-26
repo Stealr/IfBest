@@ -1,12 +1,12 @@
 import React from "react";
 import './SignInBtn.scss';
 
-const SignInBtn = () => {
+const signIn = () => {
     return (
-        <button className = "custom-button">
-            Войти
-        </button>
+            <button className="custom-button">
+                Войти
+            </button>
     );
 }
 
-export default SignInBtn;
+export default signIn;
