@@ -22,12 +22,14 @@ function Header() {
                 <LogoLight />
                 <Search />
                 {isAuth ? (
-                    <div className="header__menu">
+                    <div className="header__user-menu">
                         <button className="header__create-btn">
                             <PlusIcon className="icon" />
                             <span>Создать</span>
                         </button>
+
                         <Bell width="1.86rem" height="2.33rem" className="icon" />
+                        
                         {/* //TODO заменить иконку person */}
                         <Person className="icon" /> 
                     </div>
