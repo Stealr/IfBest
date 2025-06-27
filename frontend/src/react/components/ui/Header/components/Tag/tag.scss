@@ -1,0 +1,9 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins' as m;
+
+.tag {
+    background-color: #EAEAEA;
+    padding: 0.5rem 1.6rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+}

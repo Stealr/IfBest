@@ -1,0 +1,24 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins' as m;
+
+.signin-btn {
+    border: none;
+    background-color: #ed3437;
+    color: white;
+    border-radius: 1.4rem;
+    height: 4.2rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+
+    &:hover {
+        background-color: #BF2029;
+    }
+
+    &.compact {
+        width: 10.4rem;
+    }
+
+    &.full-width {
+        width: 100%;
+    }
+}

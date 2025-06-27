@@ -1,0 +1,41 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins' as m;
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.2rem;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.3rem;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 1.8rem;
+    }
+
+    &__create-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+
+        border: none;
+        background: none;
+
+        border: 1px solid black;
+        border-radius: 3.9rem;
+        padding: 0.55rem 1rem;
+    }
+
+    &__nav-tags {
+        display: flex;
+        gap: 0.8rem;
+        padding: 0 0.8rem;
+    }
+}

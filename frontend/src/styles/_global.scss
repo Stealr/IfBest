@@ -27,6 +27,10 @@ body {
     padding: $top-offset $content-fields 0 $content-fields;
 }
 
+.icon {
+    fill: black;
+}
+
 input,
 button,
 textarea {

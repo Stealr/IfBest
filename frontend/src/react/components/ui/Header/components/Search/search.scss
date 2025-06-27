@@ -1,0 +1,30 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins' as m;
+
+.search { 
+    position: relative;
+
+    input {
+        width: 50.8rem;
+        height: 4.2rem;
+
+        box-sizing: border-box;
+        border: none;
+        background-color: #DBDCDD;
+        border-radius: 1.4rem;
+        font-size: 1.8rem;
+
+        padding: 0 3.4rem 0 1.6rem;
+    }
+
+    input::placeholder {
+        color: black;
+    }
+
+    &__icon {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
