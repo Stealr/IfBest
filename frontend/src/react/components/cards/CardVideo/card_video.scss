@@ -17,6 +17,7 @@
 
     &__content {
         display: flex;
+        justify-content: space-between;
         padding: $main-video-gap 0;
 
         &__avatar {

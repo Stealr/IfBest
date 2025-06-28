@@ -1,4 +1,4 @@
-import logo from '@assets/images/ellipsis.png';
+import EllipsisBtn from '@components/inputs/EllipsisBtn/EllipsisBtn';
 import './card-audio.scss'
 
 const CardAudio = () => {
@@ -10,7 +10,7 @@ const CardAudio = () => {
             <p className="card-audio__title">Название трека</p>
             <span className="card-audio__info">Автор</span>
         </div>
-        <img className="card-audio__icon" src={logo} width={22} height={22} alt="Logo" />
+        <EllipsisBtn />
       </div>
     </li>
   );

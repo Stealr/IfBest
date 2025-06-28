@@ -1,3 +1,4 @@
+import EllipsisBtn from '@components/inputs/EllipsisBtn/EllipsisBtn';
 import './card_video.scss';
 
 export const CardVideo = () => {
@@ -15,6 +16,7 @@ export const CardVideo = () => {
                         ЧИСЛО просмотров • ВРЕМЯ назад
                     </div>
                 </div>
+                <EllipsisBtn />
             </div>
         </div>
     );

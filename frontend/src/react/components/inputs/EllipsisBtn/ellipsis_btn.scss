@@ -1,0 +1,7 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins' as m;
+
+.elipsis-btn {
+    fill: black;
+    cursor: pointer;
+}

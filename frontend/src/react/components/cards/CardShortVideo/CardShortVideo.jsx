@@ -1,4 +1,4 @@
-import logo from '@assets/images/ellipsis.png';
+import EllipsisBtn from '@components/inputs/EllipsisBtn/EllipsisBtn';
 import './card-short-video.scss'
 
 const CardShortVideo = () => {
@@ -10,7 +10,7 @@ const CardShortVideo = () => {
             <p className="card-short-video__title">Название видео какое-то...</p>
             <span className="card-short-video__info">600 просмотров</span>
         </div>
-        <img className="card-short-video__icon" src={logo} width={22} height={22} alt="Logo" />
+        <EllipsisBtn />
       </div>
     </li>
   );

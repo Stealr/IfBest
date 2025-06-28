@@ -1,3 +1,4 @@
+import EllipsisBtn from '@components/inputs/EllipsisBtn/EllipsisBtn';
 import PropTypes from 'prop-types';
 import './card_article.scss';
 
@@ -18,72 +19,73 @@ import './card_article.scss';
  * @returns {JSX.Element}
  */
 export default function CardArticle({
-  variant = 'compact',
-  image,
-  title,
-  text,
-  author,
-  avatar,
-  views = 0,
-  date,
+    variant = 'compact',
+    image,
+    title,
+    text,
+    author,
+    avatar,
+    views = 0,
+    date,
 }) {
-  const B = 'card-article';
+    /* ─────────── Big cards ─────────── */
+    if (variant === 'featured') {
+        return (
+            <article
+                className={`card-article card-article--featured`}
+                style={{ backgroundImage: `url(${image})` }}
+            >
+                {/* меню‑три точки */}
+                <button className={`card-article__menu`} aria-label="menu">
+                    <EllipsisBtn />
+                </button>
 
-  /* ─────────── Big cards ─────────── */
-  if (variant === 'featured') {
+                {/* заголовок */}
+                <h3 className={`card-article__title`}>{title}</h3>
+
+                {/* блок комментарий */}
+                <div className={`card-article__footer`}>
+                    <div className={`card-article__meta`}>
+                        <div className={`card-article__channel-block`}>
+                            <img className={`card-article__avatar`} src={avatar} alt={author} />
+                            <span className={`card-article__channel`}>{author}</span>
+                        </div>
+                        <span className={`card-article__stats`}>
+                            {views} просмотров • {date}
+                        </span>
+                    </div>
+
+                    {text && <p className={`card-article__text`}>{text}</p>}
+                </div>
+            </article>
+        );
+    }
+
+    /* ─────────── small cards ─────────── */
     return (
-      <article
-        className={`${B} ${B}--featured`}
-        style={{ backgroundImage: `url(${image})` }}
-      >
-        {/* меню‑три точки */}
-        <button className={`${B}__menu`} aria-label="menu">⋯</button>
+        <article className={`card-article card-article--compact`}>
+            <img className={`card-article__thumb`} src={image} alt={title} />
 
-        {/* заголовок */}
-        <h3 className={`${B}__title`}>{title}</h3>
-
-        {/* блок комментарий */}
-        <div className={`${B}__footer`}>
-          <div className={`${B}__meta`}>
-            <div className={`${B}__channel-block`}>
-              <img className={`${B}__avatar`} src={avatar} alt={author} />
-              <span className={`${B}__channel`}>{author}</span>
+            <div className={`card-article__body`}>
+                <h4 className={`card-article__title`}>{title}</h4>
+                <span className={`card-article__author`}>{author}</span>
+                <span className={`card-article__date`}>{date}</span>
             </div>
-            <span className={`${B}__stats`}>
-              {views} просмотров • {date}
-            </span>
-          </div>
 
-          {text && <p className={`${B}__text`}>{text}</p>}
-        </div>
-      </article>
+            <div className={`card-article__menu`} aria-label="menu">
+                <EllipsisBtn />
+            </div>
+        </article>
     );
-  }
-
-  /* ─────────── small cards ─────────── */
-  return (
-    <article className={`${B} ${B}--compact`}>
-      <img className={`${B}__thumb`} src={image} alt={title} />
-
-      <div className={`${B}__body`}>
-        <h4 className={`${B}__title`}>{title}</h4>
-        <span className={`${B}__author`}>{author}</span>
-        <span className={`${B}__date`}>{date}</span>
-      </div>
-
-      <button className={`${B}__menu`} aria-label="menu">⋯</button>
-    </article>
-  );
 }
 
 CardArticle.propTypes = {
-  variant: PropTypes.oneOf(['featured', 'compact']),
-  image:   PropTypes.string.isRequired,
-  title:   PropTypes.string.isRequired,
-  text:    PropTypes.string,
-  author:  PropTypes.string.isRequired,
-  avatar:  PropTypes.string,
-  views:   PropTypes.number,
-  date:    PropTypes.string.isRequired,
+    variant: PropTypes.oneOf(['featured', 'compact']),
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string,
+    author: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    views: PropTypes.number,
+    date: PropTypes.string.isRequired,
 };
-
