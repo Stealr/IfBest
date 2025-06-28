@@ -1,0 +1,25 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins' as m;
+
+.section-content {
+    margin-bottom: 8rem;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 2rem;
+    }
+
+    &__more-btn {
+        color: black;
+        text-decoration: none;
+
+        display: inline-flex;
+        align-items: center;
+
+        border: 1px solid black;
+        border-radius: 3.9rem;
+        padding: 0 1.8rem;
+    }
+}
