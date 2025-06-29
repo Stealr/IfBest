@@ -7,6 +7,7 @@ export const ENDPOINTS = {
     },
     auth: {
         login: `${API_HOST}/login`,
+        // login: `${API_HOST}/auth/login`, ?
         register: `${API_HOST}/register`,
         logout: `${API_HOST}/logout`,
         refresh_token: `${API_HOST}/refresh_token`,
