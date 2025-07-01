@@ -33,6 +33,14 @@
         padding: 0.55rem 1rem;
     }
 
+    &__notification {
+        cursor: pointer;
+    }
+
+    &__profile {
+        cursor: pointer;
+    }
+
     &__nav-tags {
         display: flex;
         gap: 0.8rem;

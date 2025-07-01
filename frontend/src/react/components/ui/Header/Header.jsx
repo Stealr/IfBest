@@ -1,4 +1,4 @@
-import SignInBtn from '@components/inputs/SignInBtn/SignInBtn';
+import AuthBtn from '@components/inputs/AuthBtn/AuthBtn';
 import Search from './components/Search/Search';
 import Tag from './components/Tag/Tag';
 
@@ -13,7 +13,7 @@ import Person from '@assets/svg/header/person.svg?react';
 const tags = ['Все', 'Обучение', 'Рукоделие', 'Красота', 'Спорт', 'Канада', 'Рецепты', 'Поезда'];
 
 function Header() {
-    const isAuth = true; // это тест, тут проверка авторизованности
+    const isAuth = true; // это тест, тут должна быть проверка авторизованности
     // тут проверка темы и выбор иконки
 
     return (
@@ -28,13 +28,13 @@ function Header() {
                             <span>Создать</span>
                         </button>
 
-                        <Bell width="1.86rem" height="2.33rem" className="icon" />
+                        <Bell width="1.86rem" height="2.33rem" className="header__notification icon" />
                         
-                        {/* //TODO заменить иконку person */}
-                        <Person className="icon" /> 
+                        {/* //TODO потом заменить иконку person */}
+                        <Person className="header__profile icon" /> 
                     </div>
                 ) : (
-                    <SignInBtn type={'compact'}>Войти</SignInBtn>
+                    <AuthBtn type={'compact'}>Войти</AuthBtn>
                 )}
             </div>
 
