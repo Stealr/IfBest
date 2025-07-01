@@ -2,8 +2,7 @@ import axios from 'axios';
 import { refreshToken } from './auth';
 
 const apiClient = axios.create({
-    baseURL: import.meta.env.VITE_API_URL, // URL из .env //мб исправить
-    // baseURL: `${import.meta.env.VITE_API_URL}/auth`, на вот такой вариант
+    baseURL: import.meta.env.VITE_API_URL, // URL из .env 
     headers: {
         'Content-Type': 'application/json',
     },
@@ -45,7 +44,7 @@ apiClient.interceptors.response.use(
       }
     }
 
-// тут обработка общих ошибок
+    //обработка общих ошибок
 
     if (error.response) {
             // errors from server

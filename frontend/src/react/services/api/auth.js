@@ -6,41 +6,26 @@ export const login = async (email, password) => {
     email, 
     password 
   });
-  
-  return {
-    accessToken: response.data.access_token,
-    refreshToken: response.data.refresh_token,
-    user: response.data.user
-  };
+  return response.data; // => { access_token, refresh_token, user }
 };
 
 export const register = async (userData) => {
   const response = await apiClient.post(ENDPOINTS.auth.register, userData);
-  
-  return {
-    accessToken: response.data.access_token,
-    refreshToken: response.data.refresh_token,
-    user: response.data.user
-  };
+  return response.data; // => { access_token, refresh_token, user }
 };
 
 export const logout = async () => {
   await apiClient.post(ENDPOINTS.auth.logout);
-  localStorage.removeItem('authToken');
-  localStorage.removeItem('refreshToken');
 };
 
 export const checkStatus = async () => {
   const response = await apiClient.get(ENDPOINTS.auth.status);
-  return response.data.user;
+  return response.data; // =>{ user }
 };
 
-export const refreshToken = async () => {
-  const refreshToken = localStorage.getItem('refreshToken');
+export const refreshToken = async (refreshToken) => {
   const response = await apiClient.post(ENDPOINTS.auth.refresh, { 
     refresh_token: refreshToken 
   });
-  
-  localStorage.setItem('authToken', response.data.access_token);
-  return response.data.access_token;
+  return response.data; // =>{ access_token }
 };

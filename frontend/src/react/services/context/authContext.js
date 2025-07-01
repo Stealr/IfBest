@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types';
-import { createContext, useState, useEffect, useContext, useCallback } from 'react';
+import { createContext, useState, useEffect, useCallback } from 'react';
 import { 
   login as apiLogin, 
   register as apiRegister, 
@@ -8,17 +7,25 @@ import {
   refreshToken as apiRefreshToken
 } from '../services/api/auth';
 
-const AuthContext = createContext();
-
-AuthProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-};//угождаем линтеру)
+export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-
+  
   const [error, setError] = useState(null);
+
+  const storeTokens = (accessToken, refreshToken) => {
+    localStorage.setItem('authToken', accessToken);
+    localStorage.setItem('refreshToken', refreshToken);
+  };
+
+  const clearTokens = () => {
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('refreshToken');
+  };
+
+  const getRefreshToken = () => localStorage.getItem('refreshToken');
 
   // token check on loading
   const checkAuth = useCallback(async () => {
@@ -30,20 +37,27 @@ export const AuthProvider = ({ children }) => {
       }
 
       try {
-        const userData = await checkStatus();
-        setUser(userData);
+        const { user } = await checkStatus();
+        setUser(user);
       } catch (statusError) {
         // if invalid - try to update token
         console.error('Status check failed:', statusError);
-        const newToken = await apiRefreshToken();
-        localStorage.setItem('authToken', newToken);
-        const userData = await checkStatus();
-        setUser(userData);
+        const refreshToken = getRefreshToken();
+        if (refreshToken) {
+          const { access_token } = await apiRefreshToken(refreshToken);
+          storeTokens(access_token, refreshToken);
+          const { user } = await checkStatus();
+          setUser(user);
+        } else {
+          throw new Error('No refresh token available');
+        }
       }
+
     } catch (error) {
       console.error('Authentication check failed:', error);
       setError(error);
-      signOut();
+      clearTokens();
+      setUser(null);
     } finally {
       setIsLoading(false);
     }
@@ -58,8 +72,7 @@ export const AuthProvider = ({ children }) => {
     setError(null);
     try {
       const { accessToken, refreshToken, user } = await apiLogin(email, password);
-      localStorage.setItem('authToken', accessToken);
-      localStorage.setItem('refreshToken', refreshToken);
+      storeTokens(accessToken, refreshToken);
       setUser(user);
     } catch (error) {
       console.error('Login failed:', error);
@@ -75,8 +88,7 @@ export const AuthProvider = ({ children }) => {
     setError(null);
     try {
       const { accessToken, refreshToken, user } = await apiRegister(userData);
-      localStorage.setItem('authToken', accessToken);
-      localStorage.setItem('refreshToken', refreshToken);
+      storeTokens(accessToken, refreshToken);
       setUser(user);
     } catch (error) {
       console.error('Registration failed:', error);
@@ -91,8 +103,7 @@ export const AuthProvider = ({ children }) => {
     setIsLoading(true);
     try {
       await apiLogout();
-      localStorage.removeItem('authToken');
-      localStorage.removeItem('refreshToken');
+      clearTokens();
       setUser(null);
       setError(null);
     } catch (error) {
@@ -117,12 +128,4 @@ export const AuthProvider = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
-};
-
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
 };
