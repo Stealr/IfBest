@@ -1,5 +1,5 @@
-import apiClient from './apiClient';
-import { ENDPOINTS } from './apiConfig';
+import apiClient from '../apiClient';
+import { ENDPOINTS } from '../apiConfig';
 
 export const login = async (email, password) => {
   const response = await apiClient.post(ENDPOINTS.auth.login, { 

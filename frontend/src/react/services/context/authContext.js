@@ -5,7 +5,7 @@ import {
   logout as apiLogout, 
   checkStatus,
   refreshToken as apiRefreshToken
-} from '../services/api/auth';
+} from '../api/auth';
 
 export const AuthContext = createContext();
 

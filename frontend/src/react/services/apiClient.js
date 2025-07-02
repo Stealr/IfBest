@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { refreshToken } from './auth';
+import { refreshToken } from './api/auth';
 
 const apiClient = axios.create({
-    baseURL: import.meta.env.VITE_API_URL, // URL из .env 
+    baseURL: import.meta.env.VITE_API_URL,// URL из .env 
     headers: {
         'Content-Type': 'application/json',
     },

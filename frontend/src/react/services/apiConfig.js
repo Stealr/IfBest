@@ -1,4 +1,6 @@
 const API_HOST = import.meta.env.VITE_API_MAIN;
+// for test
+// const API_HOST = 'http://localhost:5173/api';
 
 export const ENDPOINTS = {
     test: {
