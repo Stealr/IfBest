@@ -1,4 +1,6 @@
 const API_HOST = import.meta.env.VITE_API_MAIN;
+// for test
+// const API_HOST = 'http://localhost:5173/api';
 
 export const ENDPOINTS = {
     test: {
@@ -7,6 +9,7 @@ export const ENDPOINTS = {
     },
     auth: {
         login: `${API_HOST}/login`,
+        // login: `${API_HOST}/auth/login`, ?
         register: `${API_HOST}/register`,
         logout: `${API_HOST}/logout`,
         refresh_token: `${API_HOST}/refresh_token`,
