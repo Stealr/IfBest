@@ -1,0 +1,12 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins' as m;
+
+.portal {
+    background-color: #4A4A4F;
+    color: #FFFFFF;
+    padding: 1.2rem;
+    margin: 1rem;
+    border-radius: 1.6rem;
+    z-index: 9999;
+    min-width: 20rem;
+}

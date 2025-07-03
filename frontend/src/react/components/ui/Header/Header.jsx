@@ -1,6 +1,8 @@
 import AuthBtn from '@components/inputs/AuthBtn/AuthBtn';
 import Search from './components/Search/Search';
 import Tag from './components/Tag/Tag';
+import NotificationsContent from '@components/ui/popapContent/Notifications';
+import usePopup from '@hooks/usePopup';
 
 import './header.scss';
 
@@ -15,6 +17,12 @@ const tags = ['Все', 'Обучение', 'Рукоделие', 'Красот�
 function Header() {
     const isAuth = true; // это тест, тут должна быть проверка авторизованности
     // тут проверка темы и выбор иконки
+    const { openPopup } = usePopup();
+
+    const createPopup = (event, element) => {
+        const rect = event.currentTarget.getBoundingClientRect();
+        openPopup(element, rect);
+    };
 
     return (
         <header className="header">
@@ -23,15 +31,26 @@ function Header() {
                 <Search />
                 {isAuth ? (
                     <div className="header__user-menu">
-                        <button className="header__create-btn">
+                        <button
+                            className="header__create-btn"
+                            onClick={(event) => createPopup(event, <NotificationsContent />)}
+                        >
                             <PlusIcon className="icon" />
                             <span>Создать</span>
                         </button>
 
-                        <Bell width="1.86rem" height="2.33rem" className="header__notification icon" />
-                        
+                        <Bell
+                            width="1.86rem"
+                            height="2.33rem"
+                            className="header__notification icon"
+                            onClick={(event) => createPopup(event, <NotificationsContent />)}
+                        />
+
                         {/* //TODO потом заменить иконку person */}
-                        <Person className="header__profile icon" /> 
+                        <Person
+                            className="header__profile icon"
+                            onClick={(event) => createPopup(event, <NotificationsContent />)}
+                        />
                     </div>
                 ) : (
                     <AuthBtn type={'compact'}>Войти</AuthBtn>
