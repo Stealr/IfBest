@@ -1,7 +1,8 @@
 import AuthBtn from '@components/inputs/AuthBtn/AuthBtn';
 import Search from './components/Search/Search';
 import Tag from './components/Tag/Tag';
-import NotificationsContent from '@components/ui/popapContent/Notifications';
+import NotificationsContent from '@components/ui/popapContent/notifications/NotificationsContent.jsx';
+import CreateContentPopup from '@components/ui/popapContent/create/Create';
 import usePopup from '@hooks/usePopup';
 
 import './header.scss';
@@ -33,7 +34,7 @@ function Header() {
                     <div className="header__user-menu">
                         <button
                             className="header__create-btn"
-                            onClick={(event) => createPopup(event, <NotificationsContent />)}
+                            onClick={(event) => createPopup(event, <CreateContentPopup />)}
                         >
                             <PlusIcon className="icon" />
                             <span>Создать</span>

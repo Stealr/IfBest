@@ -1,0 +1,12 @@
+@use "@styles/typography" as *;
+@use "@styles/variables" as *;
+
+.create-content-popup{
+    display: flex;
+    flex-direction: column;
+    gap: $main-video-gap;
+
+    &__item{
+        padding: 1.25rem;
+    }
+}
