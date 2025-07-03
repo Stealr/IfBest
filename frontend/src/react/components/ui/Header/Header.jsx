@@ -12,6 +12,7 @@ import LogoDark from '@assets/svg/header/logo_dark.svg?react';
 import PlusIcon from '@assets/svg/header/plus.svg?react';
 import Bell from '@assets/svg/header/bell.svg?react';
 import Person from '@assets/svg/header/person.svg?react';
+import AccountPopup from '../popapContent/account/Account';
 
 const tags = ['Все', 'Обучение', 'Рукоделие', 'Красота', 'Спорт', 'Канада', 'Рецепты', 'Поезда'];
 
@@ -50,7 +51,7 @@ function Header() {
                         {/* //TODO потом заменить иконку person */}
                         <Person
                             className="header__profile icon"
-                            onClick={(event) => createPopup(event, <NotificationsContent />)}
+                            onClick={(event) => createPopup(event, <AccountPopup />)}
                         />
                     </div>
                 ) : (

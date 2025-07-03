@@ -1,12 +1,36 @@
-@use "@styles/typography" as *;
-@use "@styles/variables" as *;
+@use '@styles/typography' as *;
+@use '@styles/variables' as *;
 
-.create-content-popup{
+.create-content-popup {
     display: flex;
     flex-direction: column;
     gap: $main-video-gap;
 
-    &__item{
-        padding: 1.25rem;
+    &__item {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1.25rem 1rem;
+        gap: 1rem;
+        box-sizing: border-box;
+        border-radius: 1rem;
+        width: 100%;
+        cursor: pointer;
+
+        &__icon {
+            width: 2.4rem;
+        }
+
+        &:hover,
+        :active,
+        :focus {
+            background-color: $teg-button-dark;
+        }
     }
+}
+
+.elipsis-btn {
+    fill: white;
 }

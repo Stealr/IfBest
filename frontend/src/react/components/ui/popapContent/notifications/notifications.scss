@@ -1,4 +1,4 @@
-@use "@styles/variables" as *;
+@use '@styles/variables' as *;
 
 .notifications {
     width: 57rem;
@@ -13,8 +13,8 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 0.1rem solid #FFFFFF;
-        padding-bottom: 1.2rem;
+        border-bottom: 0.1rem solid #ffffff;
+        padding-bottom: 0.3rem;
     }
 
     &__list {
@@ -28,6 +28,7 @@
         gap: 1.2rem;
         position: relative;
         margin: 2rem 1.2rem;
+        cursor: pointer;
     }
 
     &__avatar {
@@ -67,5 +68,4 @@
         border-radius: $card-border-radius;
         flex-shrink: 0;
     }
-
 }

@@ -1,6 +1,6 @@
 import NotificationItem from './NotificationItem';
 import "./notifications.scss"
-// import { ReactComponent as SettingsIcon } from '@assets/svg/settings.svg';
+import SettingsIcon from '@assets/svg/settings.svg?react';
 
 const mockData = [
   {
@@ -30,9 +30,9 @@ const NotificationsContent = () => {
     <div className="notifications">
       <div className="notifications__header headline2">
         <h3>Уведомления</h3>
-        <> Settings </>
+        <SettingsIcon style={{cursor: "pointer"}}/>
       </div>
-      <div className="notifications__list title1-small">
+      <div className="notifications__list title2-small">
         {mockData.map((item) => (
           <NotificationItem key={item.id} text={item.text} time={item.time} />
         ))}
