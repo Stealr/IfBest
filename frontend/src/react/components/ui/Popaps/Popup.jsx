@@ -4,7 +4,6 @@ import './popup.scss';
 
 const Popup = ({ content, position, onClose }) => {
     const ref = useRef();
-    console.log(position);
     const [style, setStyle] = useState({
         position: 'absolute',
         top: 0,
@@ -20,31 +19,38 @@ const Popup = ({ content, position, onClose }) => {
         const popupWidth = popupRect.width;
         const viewportWidth = window.innerWidth;
 
-        // Позиция слева от якоря, чтобы правые границы совпали
         let calculatedLeft = anchorRight - popupWidth;
 
-        // Проверка выхода за левую границу экрана
         if (calculatedLeft < 0) {
-            calculatedLeft = 8; // отступ от левого края, если совсем не помещается
+            calculatedLeft = 8;
         }
 
-        // Проверка выхода за правую границу (на всякий случай)
         if (calculatedLeft + popupWidth > viewportWidth) {
-            calculatedLeft = viewportWidth - popupWidth - 8; // отступ от правого края
+            calculatedLeft = viewportWidth - popupWidth - 8;
         }
 
         setStyle({
             position: 'absolute',
             top: position.bottom,
             left: calculatedLeft,
-                // popupRect.width + position.left > window.innerWidth
-                //     ? position.left - popupRect.width * 0.91
-                //     : position.left,
             visibility: 'visible',
         });
 
         const handleClickOutside = (e) => {
-            if (ref.current && !ref.current.contains(e.target)) {
+            if (!ref.current) return;
+
+            const clickX = e.clientX;
+            const clickY = e.clientY;
+
+            const clickedInsidePopup = ref.current.contains(e.target);
+
+            const insidePosition =
+                clickX >= position.left &&
+                clickX <= position.left + position.width &&
+                clickY >= position.top &&
+                clickY <= position.top + position.height;
+
+            if (!clickedInsidePopup && !insidePosition) {
                 onClose();
             }
         };
@@ -64,12 +70,6 @@ const Popup = ({ content, position, onClose }) => {
     }, [onClose, position]);
 
     if (!position) return null;
-
-    // const style = {
-    //     position: 'absolute',
-    //     top: position.top,
-    //     left: position.left - ,
-    // };
 
     return createPortal(
         <div className="portal" ref={ref} style={style}>

@@ -4,7 +4,7 @@
 .create-content-popup {
     display: flex;
     flex-direction: column;
-    gap: $main-video-gap;
+    gap: 0.3rem;
 
     &__item {
         cursor: pointer;
@@ -19,15 +19,15 @@
         width: 100%;
         cursor: pointer;
 
-        &__icon {
-            width: 2.4rem;
-        }
-
         &:hover,
         :active,
         :focus {
             background-color: $teg-button-dark;
         }
+    }
+
+    &__icon {
+        width: 2.4rem;
     }
 }
 

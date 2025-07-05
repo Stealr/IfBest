@@ -10,19 +10,27 @@ export const PopupProvider = ({ children }) => {
     position: null,
   });
 
-  const openPopup = useCallback((content, position) => {
-    setPopupState({ isOpen: true, content, position });
+  const closePopup = useCallback(() => {
+    setPopupState((prev) => ({ ...prev, isOpen: false }));
   }, []);
 
-  const closePopup = useCallback(() => {
-    setPopupState(prev => ({ ...prev, isOpen: false }));
+  const openPopup = useCallback((content, position) => {
+    setPopupState((prev) => {
+      if (prev.isOpen && prev.content?.type === content.type) {
+        return { ...prev, isOpen: false };
+      }
+      return { isOpen: true, content, position };
+    });
   }, []);
 
   return (
-    <PopupContext.Provider value={{ openPopup, closePopup }}>
+    <PopupContext.Provider value={{ openPopup, closePopup, popupState }}>
       {children}
       {popupState.isOpen && (
-        <Popup content={popupState.content} position={popupState.position} onClose={closePopup} />
+        <Popup
+          content={popupState.content}
+          position={popupState.position}
+          onClose={closePopup} />
       )}
     </PopupContext.Provider>
   );

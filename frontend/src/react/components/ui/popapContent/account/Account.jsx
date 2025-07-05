@@ -8,28 +8,28 @@ const AccountPopup = () => {
     return (
         <div className="account-popup-content"> 
             <div className="account-popup-content__header title1-medium"> 
-                <img src="SRC!" className="account-popup-content__header__avatar"/>
-                <div className="account-popup-content__header__title">
+                <img src="SRC!" className="account-popup-content__avatar"/>
+                <div className="account-popup-content__title">
                     Какое-то имя
                     <div className="title1-small">
                         Какой-то ник
                     </div>
                 </div>
             </div>
-            <div className="account-popup-content__options"> 
-                <div className="account-popup-content__options__item">
+            <div className="account-popup-content__options title2-small"> 
+                <div className="account-popup-content__item">
                     <PaintIcon/>
                     Тема
                 </div>
-                <div className="account-popup-content__options__item">
+                <div className="account-popup-content__item">
                     <LanguageIcon/>
                     Язык
                 </div>
-                <div className="account-popup-content__options__item">
+                <div className="account-popup-content__item">
                     <SettingsIcon/>
                     Настройки
                 </div>
-                <div className="account-popup-content__options__item">
+                <div className="account-popup-content__item">
                     <OpenDoorIcon/>
                     Выход
                 </div>
