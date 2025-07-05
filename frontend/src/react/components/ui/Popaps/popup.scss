@@ -1,0 +1,13 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins' as m;
+@use '@styles/typography' as *;
+
+.portal {
+    background-color: $popup-back-dark;
+    color: $white1-text;
+    padding: 1.2rem;
+    margin: 1rem;
+    border-radius: 1.6rem;
+    z-index: 9999;
+    min-width: 20rem;
+}
