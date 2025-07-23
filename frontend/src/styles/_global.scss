@@ -14,28 +14,27 @@ body {
 }
 
 .app {
-    display: grid;
-    grid-template-areas:
-        'sidebar header'
-        'sidebar content';
-    grid-template-rows: $height-header 1fr;
-    grid-template-columns: $sidebar 1fr;
     min-height: 100vh;
 }
 
 .content {
-    padding: $top-offset $content-fields 0 $content-fields;
+    margin-left: $sidebar-width;
+    margin-top: $height-header;
+    padding: 0 $fields-offset 0 $fields-offset;
+    // padding: $top-offset $fields-offset 0 $fields-offset;
 }
 
 .icon {
     fill: black;
 }
 
-input,
+input {
+    outline: none;
+}
+
 button,
 textarea {
     outline: none;
-    font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
 }
 
@@ -129,28 +128,27 @@ textarea {
 //     @include f.body2-medium;
 // }
 
-
 // Scrollbar
 * {
-  scrollbar-width: thin;
-  scrollbar-color: #888 transparent;
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
 }
 
 *::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 
 *::-webkit-scrollbar-track {
-  background: transparent;
+    background: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 8px;
-  border: 2px solid transparent;
-  background-clip: content-box;
+    background-color: #888;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-clip: content-box;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+    background-color: #555;
 }

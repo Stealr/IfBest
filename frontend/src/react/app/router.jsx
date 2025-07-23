@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import Layout from '@components/containers/Layout/Layout.jsx';
 
+const MediaLayout = lazy(() => import('./layouts/MediaLayout/MediaLayout'));
 const HomePage = lazy(() => import('./routes/Home/Home'));
 const NotFound = lazy(() => import('./routes/NotFound/NotFound'));
 
@@ -13,11 +14,34 @@ const NotFound = lazy(() => import('./routes/NotFound/NotFound'));
 export const router = createBrowserRouter([
     {
         path: '/',
-        element: <Layout />, // Layout это обертка с header и footer
+        element: <Layout />, // Layout это обертка с header и sidebar
         children: [
+            // {
+            //     index: true,
+            //     element: <HomePage />,
+            // },
+
             {
-                index: true,
-                element: <HomePage />,
+                path: '',
+                element: <MediaLayout />, // MediaLayout содержит список тегов
+                children: [
+                    {
+                        index: true,
+                        element: <HomePage />,
+                    },
+                    // {
+                    //     path: 'videos',
+                    //     element: <VideoPage />,
+                    // },
+                    // {
+                    //     path: 'articles',
+                    //     element: <ArticlePage />,
+                    // },
+                    // {
+                    //     path: 'audios',
+                    //     element: <AudioPage />,
+                    // },
+                ],
             },
 
             // {
@@ -32,4 +56,3 @@ export const router = createBrowserRouter([
         ],
     },
 ]);
-

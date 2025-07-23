@@ -1,6 +1,5 @@
 import AuthBtn from '@components/inputs/AuthBtn/AuthBtn';
 import Search from './components/Search/Search';
-import Tag from './components/Tag/Tag';
 import NotificationsContent from '@components/ui/popapContent/notifications/NotificationsContent.jsx';
 import CreateContentPopup from '@components/ui/popapContent/create/Create';
 import usePopup from '@hooks/usePopup';
@@ -14,7 +13,7 @@ import Bell from '@assets/svg/header/bell.svg?react';
 import Person from '@assets/svg/header/person.svg?react';
 import AccountPopup from '../popapContent/account/Account';
 
-const tags = ['Все', 'Обучение', 'Рукоделие', 'Красота', 'Спорт', 'Канада', 'Рецепты', 'Поезда'];
+
 
 function Header() {
     const isAuth = true; // это тест, тут должна быть проверка авторизованности
@@ -57,12 +56,6 @@ function Header() {
                     <AuthBtn type={'compact'}>Войти</AuthBtn>
                 )}
             </div>
-
-            <nav className="header__nav-tags">
-                {tags.map((tag, index) => (
-                    <Tag key={`tag-${index}`}>{tag}</Tag>
-                ))}
-            </nav>
         </header>
     );
 }

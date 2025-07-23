@@ -1,0 +1,11 @@
+@use '@styles/variables' as *;
+
+.nav-tags {
+    position: sticky;
+    top: $height-header;
+
+    display: flex;
+    gap: 0.8rem;
+    background-color: var(--background);
+    padding: 2rem 0 0.8rem 0;
+}
