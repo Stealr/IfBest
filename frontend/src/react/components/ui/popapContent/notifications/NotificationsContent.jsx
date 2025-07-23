@@ -43,11 +43,11 @@ const mockData = [
 const NotificationsContent = () => {
     return (
         <div className="notifications">
-            <div className="notifications__header headline2">
+            <div className="notifications__header headline2-medium-f">
                 <h3>Уведомления</h3>
                 <SettingsIcon style={{ cursor: 'pointer' }} />
             </div>
-            <div className="notifications__list title2-small">
+            <div className="notifications__list">
                 {mockData.map((item) => (
                     <NotificationItem key={`notifItem${item.id}`} text={item.text} time={item.time} />
                 ))}

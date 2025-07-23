@@ -40,55 +40,55 @@ textarea {
 }
 
 // Шрифты для использования
-.headline1-large {
+.headline1-large-f {
     @include f.headline1-large;
 }
 
-.headline2-medium {
+.headline2-medium-f {
     @include f.headline2-medium;
 }
 
-.headline3-small {
+.headline3-small-f {
     @include f.headline3-small;
 }
 
-.button-small {
+.button-small-f {
     @include f.button-small;
 }
 
-.button-medium-regular {
+.button-medium-regular-f {
     @include f.button-medium-regular;
 }
 
-.button-medium {
+.button-medium-f {
     @include f.button-medium;
 }
 
-.button-large {
+.button-large-f {
     @include f.button-large;
 }
 
-.body-small {
+.body-small-f {
     @include f.body-small;
 }
 
-.body-large {
+.body-large-f {
     @include f.body-large;
 }
 
-.body-medium {
+.body-medium-f {
     @include f.body-medium;
 }
 
-.link-small {
+.link-small-f {
     @include f.link-small;
 }
 
-.input-medium {
+.input-medium-f {
     @include f.input-medium;
 }
 
-.input-small {
+.input-small-f {
     @include f.input-small;
 }
 
