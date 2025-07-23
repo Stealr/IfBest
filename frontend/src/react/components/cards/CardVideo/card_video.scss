@@ -10,7 +10,7 @@
     &__thumbnail {
         width: 100%;
         aspect-ratio: 16 / 9;
-        border-radius: $card-border-radius;
+        border-radius: 1.2rem;
         background-color: $thumbnail-background;
         object-fit: cover;
     }
@@ -18,16 +18,16 @@
     &__content {
         display: flex;
         justify-content: space-between;
-        padding: $main-video-gap 0;
+        padding: 1.2rem 0;
     }
 
     &__avatar {
         flex: none;
-        width: $avatar-size;
-        height: $avatar-size;
+        width: 4.8rem;
+        height: 4.8rem;
         background-color: $thumbnail-background;
         border-radius: 50%;
-        margin-right: $main-video-gap;
+        margin-right: 1.2rem;
     }
 
     &__channel {

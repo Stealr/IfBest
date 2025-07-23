@@ -2,10 +2,11 @@
 
 .nav-tags {
     position: sticky;
-    top: $height-header;
+    top: $header-height;
 
     display: flex;
     gap: 0.8rem;
     background-color: var(--background);
     padding: 2rem 0 0.8rem 0;
+    margin-bottom: 3.4rem;
 }
