@@ -3,6 +3,7 @@
 .nav-tags {
     position: sticky;
     top: $header-height;
+    z-index: 99;
 
     display: flex;
     gap: 0.8rem;

@@ -5,6 +5,7 @@
     position: fixed;
     top: 0;
     left: $sidebar-width;
+    z-index: 101;
 
     width: calc(100% - $sidebar-width);
     padding: 0.8rem $fields-offset;
