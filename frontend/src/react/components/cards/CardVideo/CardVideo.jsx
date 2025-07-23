@@ -6,7 +6,7 @@ export const CardVideo = () => {
         <div className="card-video">
             <img src="SRC!" alt="title" className="card-video__thumbnail" />
             <div className="card-video__content">
-                <div className="card-video__avatar"></div>
+                <img src="SRC!" className="card-video__avatar"/>
                 <div>
                     <div className="card-video__title title1-medium">
                         Название видео какое-то интересное, на три строки и более

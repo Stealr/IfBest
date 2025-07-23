@@ -1,0 +1,56 @@
+@use '@styles/variables' as *;
+
+.account-popup-content {
+    &__header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1.2rem;
+        border-bottom: 0.1rem solid #ffffff;
+        padding-bottom: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__avatar {
+        border-radius: 50%;
+        background-color: $thumbnail-background;
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: 50%;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &__options {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__item {
+        cursor: pointer;
+        box-sizing: border-box;
+        border-radius: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1.2rem 1rem;
+        gap: 1rem;
+
+        &:hover,
+        :active,
+        :focus {
+            background-color: $teg-button-dark;
+        }
+    }
+}

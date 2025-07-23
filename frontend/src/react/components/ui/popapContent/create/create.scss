@@ -1,0 +1,36 @@
+@use '@styles/typography' as *;
+@use '@styles/variables' as *;
+
+.create-content-popup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    &__item {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1.25rem 1rem;
+        gap: 1rem;
+        box-sizing: border-box;
+        border-radius: 1rem;
+        width: 100%;
+        cursor: pointer;
+
+        &:hover,
+        :active,
+        :focus {
+            background-color: $teg-button-dark;
+        }
+    }
+
+    &__icon {
+        width: 2.4rem;
+    }
+}
+
+.elipsis-btn {
+    fill: white;
+}
