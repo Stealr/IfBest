@@ -13,8 +13,8 @@ function ContentSection({ title, href, children }) {
         <section className="section-content">
             {title || href ? (
                 <div className="section-content__header">
-                    <p className="headline2">{title}</p>
-                    <Link to={href} className="section-content__more-btn">
+                    <p className="headline1-large-f">{title}</p>
+                    <Link to={href} className="section-content__more-btn button-small-f">
                         Смотреть больше
                     </Link>
                 </div>

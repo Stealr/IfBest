@@ -7,7 +7,7 @@ import './auth_btn.scss';
  */
 function AuthBtn({type, children}) {
   return (
-    <button className={`signin-btn ${type}`}>
+    <button className={`signin-btn ${type} body-small-f`}>
       {children}
     </button>
   );

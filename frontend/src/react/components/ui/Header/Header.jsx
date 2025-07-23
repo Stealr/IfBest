@@ -37,7 +37,7 @@ function Header() {
                             onClick={(event) => createPopup(event, <CreateContentPopup />)}
                         >
                             <PlusIcon className="icon" />
-                            <span>Создать</span>
+                            <span className='button-small-f'>Создать</span>
                         </button>
 
                         <Bell

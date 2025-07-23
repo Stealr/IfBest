@@ -7,8 +7,8 @@ const CardAudio = () => {
       <div className="card-audio__img"></div>
       <div className="card-audio__bottom">
         <div className="card-audio__bottom-left">
-            <p className="card-audio__title">Название трека</p>
-            <span className="card-audio__info">Автор</span>
+            <p className="card-audio__title headline3-small-f">Название трека</p>
+            <span className="card-audio__info body-small-f">Автор</span>
         </div>
         <EllipsisBtn />
       </div>

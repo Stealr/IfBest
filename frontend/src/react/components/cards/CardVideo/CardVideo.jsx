@@ -8,11 +8,11 @@ export const CardVideo = () => {
             <div className="card-video__content">
                 <img src="SRC!" className="card-video__avatar"/>
                 <div>
-                    <div className="card-video__title title1-medium">
+                    <div className="card-video__title headline3-small-f">
                         Название видео какое-то интересное, на три строки и более
                     </div>
-                    <div className="card-video__channel title1-small">Название канала</div>
-                    <div className="card-video__meta title1-small">
+                    <div className="card-video__channel body-small-f">Название канала</div>
+                    <div className="card-video__meta body-small-f">
                         ЧИСЛО просмотров • ВРЕМЯ назад
                     </div>
                 </div>

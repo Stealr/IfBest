@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    @include f.body1-medium;
+    // @include f.body1-medium;
 
     background-color: var(--background);
     color: var(--text-color);
@@ -40,44 +40,97 @@ textarea {
 }
 
 // Шрифты для использования
-.headline1 {
-    @include f.headline1;
+.headline1-large-f {
+    @include f.headline1-large;
 }
 
-.headline2 {
-    @include f.headline2;
+.headline2-medium-f {
+    @include f.headline2-medium;
 }
 
-.title1-medium {
-    @include f.title1-medium;
+.headline3-small-f {
+    @include f.headline3-small;
 }
 
-.title2-medium {
-    @include f.title2-medium;
+.button-small-f {
+    @include f.button-small;
 }
 
-.title1-small {
-    @include f.title1-small;
+.button-medium-regular-f {
+    @include f.button-medium-regular;
 }
 
-.title2-small {
-    @include f.title2-small;
+.button-medium-f {
+    @include f.button-medium;
 }
 
-.label1-large {
-    @include f.label1-large;
+.button-large-f {
+    @include f.button-large;
 }
 
-.label2-large {
-    @include f.label2-large;
+.body-small-f {
+    @include f.body-small;
 }
 
-.body2-medium {
-    @include f.body2-medium;
+.body-large-f {
+    @include f.body-large;
 }
+
+.body-medium-f {
+    @include f.body-medium;
+}
+
+.link-small-f {
+    @include f.link-small;
+}
+
+.input-medium-f {
+    @include f.input-medium;
+}
+
+.input-small-f {
+    @include f.input-small;
+}
+
+// old
+// .headline1 {
+//     @include f.headline1;
+// }
+
+// .headline2 {
+//     @include f.headline2;
+// }
+
+// .title1-medium {
+//     @include f.title1-medium;
+// }
+
+// .title2-medium {
+//     @include f.title2-medium;
+// }
+
+// .title1-small {
+//     @include f.title1-small;
+// }
+
+// .title2-small {
+//     @include f.title2-small;
+// }
+
+// .label1-large {
+//     @include f.label1-large;
+// }
+
+// .label2-large {
+//     @include f.label2-large;
+// }
+
+// .body2-medium {
+//     @include f.body2-medium;
+// }
+
 
 // Scrollbar
-
 * {
   scrollbar-width: thin;
   scrollbar-color: #888 transparent;

@@ -5,7 +5,7 @@ import './create.scss';
 
 const CreateContentPopup = () => {
     return (
-        <div className="create-content-popup title1-medium">
+        <div className="create-content-popup button-medium-f">
             <div className="create-content-popup__item">
                 <VideocamIcon className="create-content-popup__icon"/>
                 Добавить видео
