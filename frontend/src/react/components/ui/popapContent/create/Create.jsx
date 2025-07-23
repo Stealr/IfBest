@@ -7,15 +7,15 @@ const CreateContentPopup = () => {
     return (
         <div className="create-content-popup button-medium-f">
             <div className="create-content-popup__item">
-                <VideocamIcon className="create-content-popup__icon"/>
+                <VideocamIcon className="create-content-popup__icon icon"/>
                 Добавить видео
             </div>
             <div className="create-content-popup__item">
-                <ArticleIcon className="create-content-popup__icon"/>
+                <ArticleIcon className="create-content-popup__icon icon"/>
                 Добавить статью
             </div>
             <div className="create-content-popup__item">
-                <MusicNoteIcon className="create-content-popup__icon"/>
+                <MusicNoteIcon className="create-content-popup__icon icon"/>
                 Загрузить аудио
             </div>
         </div>

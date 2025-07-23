@@ -8,8 +8,9 @@
 
     width: calc(100% - $sidebar-width);
     padding: 0.8rem $fields-offset;
+    box-sizing: border-box;
 
-    background-color: var(--background);
+    background-color: $background-dark;
 
     display: flex;
     flex-direction: column;
@@ -36,7 +37,8 @@
         border: none;
         background: none;
 
-        border: 1px solid black;
+        color: $white-text-field-main-text-dark;
+        border: 1px solid $white-text-field-main-text-dark;
         border-radius: 3.9rem;
         padding: 0.55rem 1rem;
     }

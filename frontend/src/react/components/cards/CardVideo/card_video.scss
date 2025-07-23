@@ -31,12 +31,12 @@
     }
 
     &__channel {
-        color: #585858;
+        color: $additional-text;
         padding-top: 0.8rem;
         padding-bottom: 0.4rem;
     }
 
     &__meta {
-        color: #585858;
+        color: $additional-text;
     }
 }

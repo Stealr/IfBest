@@ -12,13 +12,13 @@
     }
 
     &__more-btn {
-        color: black;
+        color: $white-text-field-main-text-dark;
         text-decoration: none;
 
         display: inline-flex;
         align-items: center;
 
-        border: 1px solid black;
+        border: 1px solid $background-light;
         border-radius: 3.9rem;
         padding: 0 1.8rem;
     }

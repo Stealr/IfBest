@@ -3,8 +3,8 @@
 @use '@styles/typography' as *;
 
 .portal {
-    background-color: $popup-back-dark;
-    color: $white1-text;
+    background-color: $pop-up-bg;
+    color: $white-text-field-main-text-dark;
     padding: 1.2rem;
     margin: 1rem;
     border-radius: 1.6rem;

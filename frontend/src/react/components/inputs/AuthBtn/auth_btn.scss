@@ -3,14 +3,14 @@
 
 .signin-btn {
     border: none;
-    background-color: #ed3437;
-    color: white;
+    background-color: $red-hovering-tag-button-dark;
+    color: $white-text-field-main-text-dark;
     border-radius: 1.4rem;
     height: 4.2rem;
     cursor: pointer;
 
     &:hover {
-        background-color: #BF2029;
+        background-color: $red-hovering-button-text-dark;
     }
 
     &.compact {

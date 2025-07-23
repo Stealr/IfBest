@@ -1,3 +1,5 @@
+@use '@styles/variables' as *;
+
 .card-audio {
   overflow: hidden;
   display: flex;
@@ -25,7 +27,7 @@
   }
 
   &__title {
-    color: #000000;
+    color: $white-text-field-main-text-dark;
     margin: 0;
     white-space: nowrap;
     overflow: hidden;
@@ -38,6 +40,6 @@
   }
 
   &__info {
-    color: #606060;
+    color: $additional-text;
   }
 }

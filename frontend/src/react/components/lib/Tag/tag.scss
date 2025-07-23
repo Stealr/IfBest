@@ -2,7 +2,7 @@
 @use '@styles/mixins' as m;
 
 .tag {
-    background-color: #EAEAEA;
+    background-color: $teg-button-dark;
     padding: 0.7rem 1.6rem;
     border-radius: 1rem;
 

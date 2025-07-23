@@ -10,14 +10,14 @@
 
         box-sizing: border-box;
         border: none;
-        background-color: #DBDCDD;
+        background-color: $white-text-field-main-text-dark;
         border-radius: 1.4rem;
 
         padding: 0 3.4rem 0 1.6rem;
     }
 
     input::placeholder {
-        color: black;
+        color: $black-text;
     }
 
     &__icon {

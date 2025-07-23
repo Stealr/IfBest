@@ -27,7 +27,7 @@ function Header() {
     return (
         <header className="header">
             <div className="header__top">
-                <LogoLight />
+                <LogoDark/>
                 <Search />
                 {isAuth ? (
                     <div className="header__user-menu">
@@ -40,8 +40,6 @@ function Header() {
                         </button>
 
                         <Bell
-                            width="1.86rem"
-                            height="2.33rem"
                             className="header__notification icon"
                             onClick={(event) => createPopup(event, <NotificationsContent />)}
                         />

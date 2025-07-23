@@ -15,19 +15,19 @@ const AccountPopup = () => {
             </div>
             <div className="account-popup-content__options button-medium-f"> 
                 <div className="account-popup-content__item">
-                    <PaintIcon/>
+                    <PaintIcon className='icon'/>
                     Тема
                 </div>
                 <div className="account-popup-content__item">
-                    <LanguageIcon/>
+                    <LanguageIcon className='icon'/>
                     Язык
                 </div>
                 <div className="account-popup-content__item">
-                    <SettingsIcon/>
+                    <SettingsIcon className='icon'/>
                     Настройки
                 </div>
                 <div className="account-popup-content__item">
-                    <OpenDoorIcon/>
+                    <OpenDoorIcon className='icon'/>
                     Выход
                 </div>
             </div>

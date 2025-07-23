@@ -45,7 +45,7 @@ const NotificationsContent = () => {
         <div className="notifications">
             <div className="notifications__header headline2-medium-f">
                 <h3>Уведомления</h3>
-                <SettingsIcon style={{ cursor: 'pointer' }} />
+                <SettingsIcon className='icon' style={{ cursor: 'pointer' }} />
             </div>
             <div className="notifications__list">
                 {mockData.map((item) => (
