@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
-import Layout from '@components/containers/Layout/Layout.jsx';
+import MainLayout from './layouts/MainLayout/MainLayout.jsx';
 
 const MediaLayout = lazy(() => import('./layouts/MediaLayout/MediaLayout'));
 const HomePage = lazy(() => import('./routes/Home/Home'));
@@ -14,7 +14,7 @@ const NotFound = lazy(() => import('./routes/NotFound/NotFound'));
 export const router = createBrowserRouter([
     {
         path: '/',
-        element: <Layout />, // Layout это обертка с header и sidebar
+        element: <MainLayout />, // Layout это обертка с header и sidebar
         children: [
             // {
             //     index: true,

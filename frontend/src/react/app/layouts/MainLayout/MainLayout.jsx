@@ -4,7 +4,7 @@ import Header from '@components/ui/Header/Header';
 import SideBar from '@components/ui/SideBar/SideBar';
 // import ScrollToTop from '@helpers/ScrollToTop/ScrollToTop.jsx';
 
-const Layout = () => {
+const MainLayout = () => {
     return (
         <>
             {/* <ScrollToTop /> */}
@@ -19,4 +19,4 @@ const Layout = () => {
     );
 };
 
-export default Layout;
+export default MainLayout;
