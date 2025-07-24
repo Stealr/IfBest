@@ -1,38 +1,39 @@
-import PaintIcon from "@assets/svg/popapsContent/accountPopup/format_paint.svg?react";
-import OpenDoorIcon from "@assets/svg/popapsContent/accountPopup/door_open.svg?react";
-import LanguageIcon from "@assets/svg/popapsContent/accountPopup/language.svg?react";
-import SettingsIcon from "@assets/svg/settings.svg?react";
-import "./account.scss";
+import Avatar from '@components/lib/Avatar/Avatar';
+
+import PaintIcon from '@assets/svg/popapsContent/accountPopup/format_paint.svg?react';
+import OpenDoorIcon from '@assets/svg/popapsContent/accountPopup/door_open.svg?react';
+import LanguageIcon from '@assets/svg/popapsContent/accountPopup/language.svg?react';
+import SettingsIcon from '@assets/svg/settings.svg?react';
+import './account.scss';
 
 const AccountPopup = () => {
     return (
-        <div className="account-popup-content"> 
-            <div className="account-popup-content__header"> 
-                <img src="SRC!" className="account-popup-content__avatar"/>
-                <div className="account-popup-content__title headline3-small-f">
-                    Какое-то имя
-                </div>
+        <div className="account-popup-content">
+            <div className="account-popup-content__header">
+                <Avatar image={null} size={4.1} />
+
+                <div className="account-popup-content__title headline3-small-f">Какое-то имя</div>
             </div>
-            <div className="account-popup-content__options button-medium-f"> 
+            <div className="account-popup-content__options button-medium-f">
                 <div className="account-popup-content__item">
-                    <PaintIcon className='icon'/>
+                    <PaintIcon className="icon" />
                     Тема
                 </div>
                 <div className="account-popup-content__item">
-                    <LanguageIcon className='icon'/>
+                    <LanguageIcon className="icon" />
                     Язык
                 </div>
                 <div className="account-popup-content__item">
-                    <SettingsIcon className='icon'/>
+                    <SettingsIcon className="icon" />
                     Настройки
                 </div>
                 <div className="account-popup-content__item">
-                    <OpenDoorIcon className='icon'/>
+                    <OpenDoorIcon className="icon" />
                     Выход
                 </div>
             </div>
         </div>
-    )
+    );
 };
 
 export default AccountPopup;

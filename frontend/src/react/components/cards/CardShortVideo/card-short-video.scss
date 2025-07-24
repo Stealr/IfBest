@@ -1,4 +1,5 @@
 @use '@styles/variables' as *;
+@use '@styles/mixins' as m;
 
 .card-short-video {
   overflow: hidden;
@@ -29,14 +30,8 @@
   &__title {
     color: $white-text-field-main-text-dark;
     margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    line-clamp: 2;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    white-space: normal;
+
+    @include m.wrap-text(2);
   }
 
   &__info {

@@ -1,0 +1,8 @@
+@use '@/styles/variables' as *;
+
+.avatar {
+    border-radius: 50%;
+
+    background-color: $red-hovering-button-text-dark;
+    flex-shrink: 0;
+}

@@ -1,0 +1,71 @@
+@use '@/styles/variables' as *;
+@use '@styles/mixins' as m;
+
+.la-card {
+    // max-width: 90rem;
+    height: 40.4rem;
+    border-radius: 1.6rem;
+
+    background-color: #d9d9d9;
+
+    &__content {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 2.1rem;
+
+        height: 100%;
+        box-sizing: border-box;
+        padding: 1.2rem;
+    }
+
+    &__ellipsis {
+        position: absolute;
+        top: 1.2rem;
+        right: 1.2rem;
+    }
+
+    &__footer {
+        background-color: $white-text-field-main-text-dark;
+
+        padding: 1.2rem;
+        border-radius: 1.2rem;
+    }
+
+    &__meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        color: $white-text-field-main-text-dark;
+        text-align: center;
+
+        @include m.wrap-text(2);
+    }
+
+    &__channel-block {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    &__channel {
+        color: $drag-drop-text-dark;
+    }
+
+    &__stats {
+        color: $drag-drop-text-dark;
+    }
+
+    &__text {
+        color: $black-text;
+
+        @include m.wrap-text(3);
+    }
+}

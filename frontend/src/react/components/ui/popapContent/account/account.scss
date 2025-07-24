@@ -12,14 +12,6 @@
         margin-bottom: 1rem;
     }
 
-    &__avatar {
-        border-radius: 50%;
-        background-color: $red-hovering-button-text-dark;
-        width: 4.8rem;
-        height: 4.8rem;
-        border-radius: 50%;
-    }
-
     &__title {
         display: flex;
         flex-direction: column;
@@ -50,7 +42,7 @@
         &:hover,
         :active,
         :focus {
-            background-color: $teg-button-dark;
+            background-color: $tag-button-dark;
         }
     }
 }

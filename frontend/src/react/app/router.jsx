@@ -45,8 +45,22 @@ export const router = createBrowserRouter([
             },
 
             // {
-            //   path: '/route',
-            //   element: <Page />,
+            //     path: '/test',
+            //     element: (
+            //         <SmArtCard
+            //             data={{
+            //                 id: 1,
+            //                 variant: 'featured',
+            //                 // image: featuredImg,
+            //                 title: 'Название видео какое‑то интересное, длинное, здоровское. Название видео какое‑то интересное, длинное, здоровское. Название видео какое‑то интересное, длинное, здоровское. Название видео какое‑то интересное, длинное, здоровское. Название видео какое‑то интересное, длинное, здоровское',
+            //                 text: 'Lorem ipsum dolor sit amet consectetur. Scelerisque quam tristique fermentum in morbi. Sed odio in risus faucibus. Fames mauris enim aliquet vel massa metus. Enim molestie convallis euismod quam nisl sit maecenas. Fames mauris enim aliquet vel massa metus. Enim molestie convallis euismod quam. Lorem ipsum dolor sit amet consectetur. Scelerisque quam tristique fermentum in morbi. Sed odio in risus faucibus. Fames mauris enim aliquet vel massa metus. Enim molestie convallis euismod quam nisl sit maecenas. Fames mauris enim aliquet vel massa metus. Enim molestie convallis euismod quam...',
+            //                 author: 'Название канала',
+            //                 // avatar,
+            //                 views: 600,
+            //                 date: '1 месяц назад',
+            //             }}
+            //         />
+            //     ),
             // },
 
             {

@@ -7,7 +7,7 @@ const CardShortVideo = () => {
       <div className="card-short-video__img"></div>
       <div className="card-short-video__bottom">
         <div className="card-short-video__bottom-left">
-            <p className="card-short-video__title headline3-small-f">Название видео какое-то...</p>
+            <p className="card-short-video__title headline3-small-f">Название видео какое-то длинное. Название видео какое-то длинное. Название видео какое-то длинное</p>
             <span className="card-short-video__info body-small-f">600 просмотров</span>
         </div>
         <EllipsisBtn />

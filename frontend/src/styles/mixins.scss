@@ -1,5 +1,5 @@
-@use "./variables" as *;
-@use "sass:map";
+@use './variables' as *;
+@use 'sass:map';
 
 // @mixin container {
 //   margin: 0 auto;
@@ -8,9 +8,17 @@
 // }
 
 @mixin max-media($breakpoint) {
-  $size: map.get($media-sizes, $breakpoint);
+    $size: map.get($media-sizes, $breakpoint);
 
-  @media (max-width: $size) {
-    @content;
-  }
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin wrap-text($line-clamp) {
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: $line-clamp;
+    -webkit-line-clamp: $line-clamp;
+    -webkit-box-orient: vertical;
 }

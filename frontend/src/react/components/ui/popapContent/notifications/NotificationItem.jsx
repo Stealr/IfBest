@@ -1,10 +1,12 @@
 import "./notifications.scss"
+import Avatar from '@components/lib/Avatar/Avatar';
 import EllipsisBtn from '@components/inputs/EllipsisBtn/EllipsisBtn';
 
 const NotificationItem = ({ text, time }) => {
   return (
     <div className="notifications__item">
-      <img src={'src'} className="notifications__avatar"/> 
+      <Avatar image={null} size={4.8}/>
+
       <div className="notifications__content">
         <div className="notifications__text headline3-small-f">{text}</div>
         <div className="notifications__time body-small-f">{time}</div>
