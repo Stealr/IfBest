@@ -2,6 +2,7 @@ import js from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 import prettierConfig from 'eslint-config-prettier';
 // import jsxA11y from 'eslint-plugin-jsx-a11y';
+import pluginQuery from '@tanstack/eslint-plugin-query'
 import pluginReact from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
@@ -33,6 +34,7 @@ export default defineConfig([
             ...js.configs.recommended.rules,
             ...pluginReact.configs.recommended.rules,
             ...reactHooks.configs.recommended.rules,
+            ...pluginQuery.configs['flat/recommended'],
             // ...jsxA11y.configs.recommended.rules,
 
             'react/react-in-jsx-scope': 'off',
