@@ -3,14 +3,10 @@ import './auth_btn.scss';
 /**
  * Description
  * @param {string} type: 'full-width' | 'compact'
- * @param {any} children: 'Войти' | 'Регистрация'
+ * @param {any} children: 'Войти' | 'Регистрация | Отправить | Сохранить'
  */
-function AuthBtn({type, children}) {
-  return (
-    <button className={`signin-btn ${type} body-small-f`}>
-      {children}
-    </button>
-  );
+function AuthBtn({ type, children }) {
+    return <button className={`auth-btn ${type} button-small-f`}>{children}</button>;
 }
 
 export default AuthBtn;

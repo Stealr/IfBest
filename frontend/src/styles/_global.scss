@@ -19,8 +19,8 @@ body {
 
 .content {
     margin-left: $sidebar-width;
-    margin-top: $header-height;
-    padding: 0 $fields-offset 0 $fields-offset;
+    // margin-top: $header-height;
+    padding: $header-height $fields-offset 0 $fields-offset;
     // padding: $top-offset $fields-offset 0 $fields-offset;
 }
 

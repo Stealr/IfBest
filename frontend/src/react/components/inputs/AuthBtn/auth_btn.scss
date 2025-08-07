@@ -1,16 +1,17 @@
 @use '@styles/variables' as *;
 @use '@styles/mixins' as m;
 
-.signin-btn {
+.auth-btn {
     border: none;
     background-color: $red-hovering-tag-button-dark;
     color: $white-text-field-main-text-dark;
     border-radius: 1.4rem;
     height: 4.2rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 
     &:hover {
-        background-color: $red-hovering-button-text-dark;
+        background-color: $hovering-red-button;
     }
 
     &.compact {

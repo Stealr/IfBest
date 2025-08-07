@@ -4,7 +4,12 @@ import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout/MainLayout.jsx';
 
 const MediaLayout = lazy(() => import('./layouts/MediaLayout/MediaLayout'));
+const Register = lazy(() => import('./routes/AuthForm/Register/Register'));
+const PasswordRecovery = lazy(() => import('./routes/AuthForm/PasswordRecovery/PasswordRecovery'));
+const PasswordReset = lazy(() => import('./routes/AuthForm/PasswordReset/PasswordReset'));
+
 const HomePage = lazy(() => import('./routes/Home/Home'));
+
 const NotFound = lazy(() => import('./routes/NotFound/NotFound'));
 
 //! Возможно в будующем возникнет проблема микро загрузок, так как компонент сначала отрисовывается
@@ -42,6 +47,19 @@ export const router = createBrowserRouter([
                     //     element: <AudioPage />,
                     // },
                 ],
+            },
+
+            {
+                path: 'signup',
+                element: <Register />,
+            },
+            {
+                path: 'password_recovery',
+                element: <PasswordRecovery />,
+            },
+            {
+                path: 'password_reset',
+                element: <PasswordReset />,
             },
 
             // {

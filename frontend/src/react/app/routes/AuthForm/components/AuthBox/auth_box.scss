@@ -1,0 +1,32 @@
+@use '@styles/variables' as *;
+
+.auth-box {
+    border: 1px solid $tag-button-dark;
+    border-radius: 1.6rem;
+    padding: 2.8rem;
+    width: 33.2rem;
+    margin: 0 auto;
+    margin-top: 8.4rem;
+    box-sizing: border-box;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        color: $white-text-field-main-text-dark;
+        text-align: center;
+        margin-bottom: 2.4rem;
+    }
+
+    &__info {
+        font-weight: 400;
+    }
+
+    &__content {
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+    }
+}

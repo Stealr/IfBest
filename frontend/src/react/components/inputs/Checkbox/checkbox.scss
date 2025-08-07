@@ -1,0 +1,55 @@
+@use '@styles/variables.scss' as *;
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    gap: 8px;
+    
+    span {
+        font-weight: 400;
+    }
+
+    a {
+        text-decoration: none;
+        color: $hovering-adv-button-bg;
+    }
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkbox .checkbox__checkmark {
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: $grey-article-border;
+    border-radius: 2px;
+    position: relative;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+}
+
+.checkbox input + .checkbox__checkmark::after {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    background-image: url('@assets/svg/сheck_mark.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    content: '';
+    position: absolute;
+}
+
+.checkbox input:checked + .checkbox__checkmark::after {
+    opacity: 1;
+}
+
+.checkbox input:checked + .checkbox__checkmark {
+    background-color: $red-hovering-tag-button-dark;
+}
