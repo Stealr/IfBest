@@ -1,0 +1,58 @@
+import { useId } from 'react';
+
+export const MAIN_VIDEOS = [
+    {
+        id: useId(),
+        name: 'Очень длинное название видео, прям очень очень очень и очень длинное название для одного видео',
+        channel: 'Название канала длинное',
+        views: 600,
+        date: '1 месяц назад',
+        preview: '@assets/images/mockImages/cat1',
+        avatar: '@assets/images/mockImages/avatar',
+    },
+    {
+        id: useId(),
+        name: 'Очень длинное название видео, прям очень очень очень и очень длинное название для одного видео',
+        channel: 'Название канала длинное',
+        views: 600,
+        date: '1 месяц назад',
+        preview: '@assets/images/mockImages/cat2',
+        avatar: '@assets/images/mockImages/avatar',
+    },
+    {
+        id: useId(),
+        name: 'Очень длинное название видео, прям очень очень очень и очень длинное название для одного видео',
+        channel: 'Название канала длинное',
+        views: 600,
+        date: '1 месяц назад',
+        preview: '@assets/images/mockImages/dog',
+        avatar: '@assets/images/mockImages/avatar',
+    },
+    {
+        id: useId(),
+        name: 'Очень длинное название видео, прям очень очень очень и очень длинное название для одного видео',
+        channel: 'Название канала длинное',
+        views: 600,
+        date: '1 месяц назад',
+        preview: '@assets/images/mockImages/cat1',
+        avatar: '@assets/images/mockImages/avatar',
+    },
+    {
+        id: useId(),
+        name: 'Очень длинное название видео, прям очень очень очень и очень длинное название для одного видео',
+        channel: 'Название канала длинное',
+        views: 600,
+        date: '1 месяц назад',
+        preview: '@assets/images/mockImages/cat2',
+        avatar: '@assets/images/mockImages/avatar',
+    },
+    {
+        id: useId(),
+        name: 'Очень длинное название видео, прям очень очень очень и очень длинное название для одного видео',
+        channel: 'Название канала длинное',
+        views: 600,
+        date: '1 месяц назад',
+        preview: '@assets/images/mockImages/dog',
+        avatar: '@assets/images/mockImages/avatar',
+    },
+];
