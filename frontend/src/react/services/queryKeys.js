@@ -1,0 +1,1 @@
+//? тут будут ключи для useQuery и useMutation
