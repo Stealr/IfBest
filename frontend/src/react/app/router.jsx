@@ -4,6 +4,9 @@ import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout/MainLayout.jsx';
 
 const MediaLayout = lazy(() => import('./layouts/MediaLayout/MediaLayout'));
+
+const ContentViewPage = lazy(() => import('./routes/ContentViewPage/ContentViewPage'));
+
 const Register = lazy(() => import('./routes/AuthForm/Register/Register'));
 const PasswordRecovery = lazy(() => import('./routes/AuthForm/PasswordRecovery/PasswordRecovery'));
 const PasswordReset = lazy(() => import('./routes/AuthForm/PasswordReset/PasswordReset'));
@@ -47,6 +50,11 @@ export const router = createBrowserRouter([
                     //     element: <AudioPage />,
                     // },
                 ],
+            },
+
+            {
+                path: 'content/test',
+                element: <ContentViewPage />,
             },
 
             {
