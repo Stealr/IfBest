@@ -1,4 +1,5 @@
-import { createContext, useState, useCallback } from 'react';
+import { createContext, useState, useCallback, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Popup from '@components/ui/Popups/Popup/Popup.jsx';
 
 export const PopupContext = createContext();
@@ -10,6 +11,14 @@ export const PopupProvider = ({ children }) => {
         position: null,
         variant: 'popover', // 'popover' или 'modal'
     });
+
+    const location = useLocation();
+
+    useEffect(() => {
+        if (popupState.isOpen) {
+            closePopup();
+        }
+    }, [location]);
 
     const closePopup = useCallback(() => {
         setPopupState((prev) => ({ ...prev, isOpen: false }));

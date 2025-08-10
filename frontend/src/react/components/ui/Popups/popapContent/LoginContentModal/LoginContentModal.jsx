@@ -22,15 +22,14 @@ function LoginContentModal() {
 
     const onSubmit = (data) => console.log(data);
 
-    const handleClickReg = () => {
-        closePopup();
-        navigate('signup');
+    const handleNavigate = (path) => {
+        navigate(path);
     };
 
     return (
         <div className="login-content">
             <button onClick={closePopup} className="login-content__close-btn">
-                <CloseIcon className={'icon'}/>
+                <CloseIcon className={'icon'} />
             </button>
             <h2 className="login-content__title headline2-medium-f">Вход</h2>
             <form className="login-content__form" onSubmit={handleSubmit(onSubmit)}>
@@ -59,7 +58,7 @@ function LoginContentModal() {
 
                 <div className="login-content__btns">
                     <AuthBtn
-                        onClick={handleClickReg}
+                        onClick={() => handleNavigate('signup')}
                         size="full-width"
                         color="grey"
                         type={'button'}
@@ -71,7 +70,9 @@ function LoginContentModal() {
                     </AuthBtn>
                 </div>
             </form>
-            <p className="login-content__forget-pass input-small-f">Забыли пароль?</p>
+            <div className="login-content__forget-pass input-small-f">
+                <Link to={'password_recovery'} >Забыли пароль?</Link>
+            </div>
         </div>
     );
 }

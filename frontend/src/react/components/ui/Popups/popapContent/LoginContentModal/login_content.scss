@@ -37,8 +37,14 @@
     }
 
     &__forget-pass {
-        cursor: pointer;
         color: $hovering-adv-button-bg;
+
         text-align: center;
+        display: block;
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
 }
