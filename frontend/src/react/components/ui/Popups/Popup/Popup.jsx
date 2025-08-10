@@ -1,18 +1,22 @@
-import { useEffect, useRef, useState, lazy } from 'react';
+import { useRef, useLayoutEffect, useState, lazy, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 const Overlay = lazy(() => import('@components/ui/Overlay/Overlay'));
+
+import { useLockScroll } from '@hooks/useLockScroll';
+import { useKeyDown } from '@hooks/useKeyDown';
+
 import './popup.scss';
 import './modal.scss';
 
 /**
  * Description - компонент для управления всплывающими окнами
- * @param {string} variant 'popover | modal'
- * @param {component} content 'содержимое попапа'
- * @param {object} position 'позиция элемента, который вызвал попап'
- * @param {void} onClose 'функция для закрытия'
+ * @param {'popover' | 'modal'} variant - тип окна
+ * @param {React.ReactNode} content - содержимое
+ * @param {DOMRect} [position] - позиция элемента (для popover)
+ * @param {() => void} onClose - функция для закрытия
  */
 const Popup = ({ variant, content, position, onClose }) => {
-    const ref = useRef();
+    const contentRef = useRef(null);
     const [style, setStyle] = useState({
         position: 'absolute',
         top: 0,
@@ -20,38 +24,42 @@ const Popup = ({ variant, content, position, onClose }) => {
         visibility: 'hidden',
     });
 
-    useEffect(() => {
-        if (variant !== 'popover' || !ref.current || !position) return;
+    // --- ОБЩАЯ ЛОГИКА ---
+    const handleEsc = useCallback((e) => {
+            if (e.key === 'Escape') {
+                onClose();
+            }
+        }, [onClose]);
+    useKeyDown(handleEsc);
 
-        const popupRect = ref.current.getBoundingClientRect();
-        const anchorRight = position.left + position.width;
-        const popupWidth = popupRect.width;
+    // --- ЛОГИКА ДЛЯ POPOVER ---
+    useLayoutEffect(() => {
+        if (variant !== 'popover' || !contentRef.current || !position) return;
+
+        const popoverRect = contentRef.current.getBoundingClientRect();
         const viewportWidth = window.innerWidth;
 
-        let calculatedLeft = anchorRight - popupWidth;
+        let left = position.left + position.width - popoverRect.width;
 
-        if (calculatedLeft < 0) {
-            calculatedLeft = 8;
-        }
-
-        if (calculatedLeft + popupWidth > viewportWidth) {
-            calculatedLeft = viewportWidth - popupWidth - 8;
+        if (left < 8) left = 8;
+        if (left + popoverRect.width > viewportWidth) {
+            left = viewportWidth - popoverRect.width - 8;
         }
 
         setStyle({
             position: 'absolute',
-            top: position.bottom,
-            left: calculatedLeft,
+            top: `${position.bottom + 4}px`,
+            left: `${left}px`,
             visibility: 'visible',
         });
 
         const handleClickOutside = (e) => {
-            if (!ref.current) return;
+            if (!contentRef.current) return;
 
             const clickX = e.clientX;
             const clickY = e.clientY;
 
-            const clickedInsidePopup = ref.current.contains(e.target);
+            const clickedInsidePopup = contentRef.current.contains(e.target);
 
             const insidePosition =
                 clickX >= position.left &&
@@ -64,46 +72,19 @@ const Popup = ({ variant, content, position, onClose }) => {
             }
         };
 
-        const handleEsc = (e) => {
-            if (e.key === 'Escape') {
-                onClose();
-            }
-        };
-
         document.addEventListener('mousedown', handleClickOutside);
-        document.addEventListener('keydown', handleEsc);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
-            document.removeEventListener('keydown', handleEsc);
         };
-    }, [variant, onClose, position]);
+    }, [variant, position]);
 
-    // useEffect'ы для modals
-    useEffect(() => {
-        if (variant === 'modal') {
-            document.body.style.overflow = 'hidden';
-        }
-        return () => {
-            document.body.style.overflow = 'auto';
-        };
-    }, [variant]);
-
-    useEffect(() => {
-        if (variant !== 'modal') return;
-
-        const handleEsc = (e) => {
-            if (e.key === 'Escape') {
-                onClose();
-            }
-        };
-        document.addEventListener('keydown', handleEsc);
-        return () => document.removeEventListener('keydown', handleEsc);
-    }, [variant, onClose]);
+    // --- ЛОГИКА ДЛЯ MODAL ---
+    useLockScroll(variant === 'modal');
 
     if (variant === 'popover') {
         if (!position) return null;
         return createPortal(
-            <div className="portal-popover" ref={ref} style={style}>
+            <div className="portal-popover" ref={contentRef} style={style}>
                 {content}
             </div>,
             document.body
