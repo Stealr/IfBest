@@ -1,7 +1,8 @@
 import AuthBtn from '@components/inputs/AuthBtn/AuthBtn';
 import Search from './components/Search/Search';
-import NotificationsContent from '@components/ui/popapContent/notifications/NotificationsContent.jsx';
-import CreateContentPopup from '@components/ui/popapContent/create/Create';
+import NotificationsContent from '@components/ui/Popups/popapContent/notifications/NotificationsContent';
+import CreateContentPopup from '@components/ui/Popups/popapContent/create/Create';
+import AccountPopup from '@components/ui/Popups/popapContent/account/Account';
 import usePopup from '@hooks/usePopup';
 
 import './header.scss';
@@ -11,9 +12,6 @@ import LogoDark from '@assets/svg/header/logo_dark.svg?react';
 import PlusIcon from '@assets/svg/header/plus.svg?react';
 import Bell from '@assets/svg/header/bell.svg?react';
 import Person from '@assets/svg/header/person.svg?react';
-import AccountPopup from '../popapContent/account/Account';
-
-
 
 function Header() {
     const isAuth = true; // это тест, тут должна быть проверка авторизованности

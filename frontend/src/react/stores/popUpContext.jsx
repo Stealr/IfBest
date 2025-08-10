@@ -1,5 +1,5 @@
 import { createContext, useState, useCallback } from 'react';
-import Popup from '@components/ui/popaps/Popup.jsx';
+import Popup from '@components/ui/Popups/Popup/Popup.jsx';
 
 export const PopupContext = createContext();
 
@@ -15,6 +15,8 @@ export const PopupProvider = ({ children }) => {
   }, []);
 
   const openPopup = useCallback((content, position) => {
+    console.log('test')
+
     setPopupState((prev) => {
       if (prev.isOpen && prev.content?.type === content.type) {
         return { ...prev, isOpen: false };
