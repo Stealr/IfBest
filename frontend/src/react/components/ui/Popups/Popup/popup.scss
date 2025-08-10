@@ -1,13 +1,12 @@
 @use '@styles/variables' as *;
-@use '@styles/mixins' as m;
-@use '@styles/typography' as *;
+@use 'sass:map';
 
-.portal {
+.portal-popover {
     background-color: $pop-up-bg;
     color: $white-text-field-main-text-dark;
     padding: 1.2rem;
     margin: 1rem;
     border-radius: 1.6rem;
-    z-index: 9999;
+    z-index: map.get($zIndexes, 'popover');
     min-width: 20rem;
 }

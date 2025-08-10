@@ -1,12 +1,24 @@
 $media-sizes: (
-  // "xs": 480px,
-  // "s": 640px,
-  // "sm": 800px,
-  // "m": 900px,
-  // "l": 1024px,
-  // "xl": 1350px,
-  // "2xl": 1920px,
+    // "xs": 480px,
+    // "s": 640px,
+    // "sm": 800px,
+    // "m": 900px,
+    // "l": 1024px,
+    // "xl": 1350px,
+     // "2xl": 1920px,
 );
+
+$zIndexes: (
+    'header': 110,
+    'sidebar': 105,
+    'nav-tags': 100,
+
+    'popover': 120,
+    'modal': 120,
+    'overlay-above-layout': 115,
+    'overlay-below-layout': 104,
+);
+
 
 // Content
 $fields-offset: 1.8rem;
@@ -18,7 +30,6 @@ $header-height: 5.8rem;
 // sidebar
 $sidebar-width: 5.8rem;
 $opened-sidebar-width: 20rem;
-
 
 // цвета старые
 // $background-dark: #363636;
@@ -59,34 +70,34 @@ $opened-sidebar-width: 20rem;
 // $hovering-red-button: #CD2C35;
 
 // цвета новые
-$background-dark: #37373A;
-$text-field-dark: #3E3E3E;
+$background-dark: #37373a;
+$text-field-dark: #3e3e3e;
 $border-dark: rgba(255, 255, 255, 0.2);
-$red-hovering-tag-button-dark: #ED3437;
-$hovering-red-button: #BF2029;
-$header-dark: #2E2E2E;
+$red-hovering-tag-button-dark: #ed3437;
+$hovering-red-button: #bf2029;
+$header-dark: #2e2e2e;
 $scrollbar-dark: #767676;
-$red-hovering-button-text-dark: #D9D9D9;
-$pop-up-bg: #4A4A4F;
+$red-hovering-button-text-dark: #d9d9d9;
+$pop-up-bg: #4a4a4f;
 $hovering-red-button2: #878787;
 $black-text: #000000;
-$grey-article-border: #AFB0B1;
-$background-light: #FCFEFF;
-$white-text-field-main-text-dark: #FFFFFF;
-$main-fields: #DBDCDD;
-$additional-text: #AFB0B0;
-$hovering-tag-button-light: #CBCBCB;
-$button-watch-more: #1C1C1C;
-$hovering-adv-button-bg: #A0CEF8;
-$adv-button-text: #295DCD;
-$adv-button-bg: #E2F0FD;
+$grey-article-border: #afb0b1;
+$background-light: #fcfeff;
+$white-text-field-main-text-dark: #ffffff;
+$main-fields: #dbdcdd;
+$additional-text: #afb0b0;
+$hovering-tag-button-light: #cbcbcb;
+$button-watch-more: #1c1c1c;
+$hovering-adv-button-bg: #a0cef8;
+$adv-button-text: #295dcd;
+$adv-button-bg: #e2f0fd;
 $entrance-bg-dark-2: rgba(0, 0, 0, 0.64);
 $entrance-bg-dark: rgba(255, 255, 255, 0.4);
 $transparency-main-text-dark: rgba(255, 255, 255, 0.7);
 $transparency-main-text-light: rgba(0, 0, 0, 0.5);
-$tag-button-dark: #6A6A6A;
-$tag-button-light: #EAEAEA;
+$tag-button-dark: #6a6a6a;
+$tag-button-light: #eaeaea;
 $drag-drop-text-dark: #585858;
-$drag-drop-light: #F2F2F2;
+$drag-drop-light: #f2f2f2;
 $content-blocks-dark: rgba(67, 67, 70, 1);
 $content-blocks-light: rgba(248, 248, 248, 1);

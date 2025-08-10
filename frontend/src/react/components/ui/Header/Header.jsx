@@ -14,7 +14,7 @@ import Bell from '@assets/svg/header/bell.svg?react';
 import Person from '@assets/svg/header/person.svg?react';
 
 function Header() {
-    const isAuth = true; // это тест, тут должна быть проверка авторизованности
+    const isAuth = false; // это тест, тут должна быть проверка авторизованности
     const { openPopup } = usePopup();
 
     const createPopup = (event, element) => {
@@ -22,10 +22,14 @@ function Header() {
         openPopup(element, rect);
     };
 
+    const openLoginModal = () => {
+        openPopup(<p>test</p>, null, 'modal');
+    };
+
     return (
         <header className="header">
             <div className="header__top">
-                <LogoDark/>
+                <LogoDark />
                 <Search />
                 {isAuth ? (
                     <div className="header__user-menu">
@@ -34,7 +38,7 @@ function Header() {
                             onClick={(event) => createPopup(event, <CreateContentPopup />)}
                         >
                             <PlusIcon className="icon" />
-                            <span className='button-small-f'>Создать</span>
+                            <span className="button-small-f">Создать</span>
                         </button>
 
                         <Bell
@@ -42,14 +46,15 @@ function Header() {
                             onClick={(event) => createPopup(event, <NotificationsContent />)}
                         />
 
-                        {/* //TODO потом заменить иконку person */}
                         <Person
                             className="header__profile icon"
                             onClick={(event) => createPopup(event, <AccountPopup />)}
                         />
                     </div>
                 ) : (
-                    <AuthBtn type={'compact'}>Войти</AuthBtn>
+                    <AuthBtn onClick={openLoginModal} type={'compact'}>
+                        Войти
+                    </AuthBtn>
                 )}
             </div>
         </header>

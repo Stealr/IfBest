@@ -5,8 +5,12 @@ import './auth_btn.scss';
  * @param {string} type: 'full-width' | 'compact'
  * @param {any} children: 'Войти' | 'Регистрация | Отправить | Сохранить'
  */
-function AuthBtn({ type, children }) {
-    return <button className={`auth-btn ${type} button-small-f`}>{children}</button>;
+function AuthBtn({ type, onClick, children }) {
+    return (
+        <button onClick={onClick} className={`auth-btn ${type} button-small-f`}>
+            {children}
+        </button>
+    );
 }
 
 export default AuthBtn;

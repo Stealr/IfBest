@@ -1,0 +1,15 @@
+@use '@styles/variables' as *;
+@use 'sass:map';
+
+.portal-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: $pop-up-bg;
+    padding: 1.2rem;
+    border-radius: 1.6rem;
+
+    z-index: map.get($zIndexes, 'modal');
+}
