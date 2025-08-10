@@ -17,6 +17,7 @@ function PasswordReset() {
             <AuthBox title={'Смена пароля'}>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <Input
+                        variant={'commonV'}
                         label={'password'}
                         placeholder={'Пароль'}
                         register={register}
@@ -26,6 +27,7 @@ function PasswordReset() {
                         type={'password'}
                     />
                     <Input
+                        variant={'commonV'}
                         label={'confirm-password'}
                         placeholder={'Повторите пароль'}
                         register={register}
@@ -35,7 +37,7 @@ function PasswordReset() {
                         type={'password'}
                     />
                     <div style={{ marginTop: '0.8rem' }}>
-                        <AuthBtn type={'full-width'}>Сохранить</AuthBtn>
+                        <AuthBtn size="full-width" color="red">Сохранить</AuthBtn>
                     </div>
                 </form>
             </AuthBox>

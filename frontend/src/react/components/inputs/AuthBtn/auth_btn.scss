@@ -3,22 +3,37 @@
 
 .auth-btn {
     border: none;
-    background-color: $red-hovering-tag-button-dark;
     color: $white-text-field-main-text-dark;
     border-radius: 1.4rem;
     height: 4.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
-    &:hover {
-        background-color: $hovering-red-button;
-    }
-
     &.compact {
         width: 10.4rem;
     }
 
-    &.full-width {
+    &--size-compact {
+        width: 10.4rem;
+    }
+
+    &--size-full-width {
         width: 100%;
+    }
+
+    &--color-grey {
+        background-color: $grey-article-border;
+
+        &:hover {
+            background-color: $hovering-reg-button;
+        }
+    }
+
+    &--color-red {
+        background-color: $red-hovering-tag-button-dark;
+
+        &:hover {
+            background-color: $hovering-red-button;
+        }
     }
 }

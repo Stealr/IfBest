@@ -1,0 +1,44 @@
+@use '@styles/variables' as *;
+
+.login-content {
+    padding: 4.8rem 2.8rem 3.6rem 2.8rem;
+    width: 27.6rem;
+    position: relative;
+
+    &__close-btn {
+        position: absolute;
+        top: 1.6rem;
+        right: 1.6rem;
+        cursor: pointer;
+
+        padding: 0;
+        border: none;
+        background: none;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 2.4rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        margin-bottom: 2.4rem;
+    }
+
+    &__btns {
+        margin-top: 0.8rem;
+
+        display: flex;
+        gap: 0.8rem;
+    }
+
+    &__forget-pass {
+        cursor: pointer;
+        color: $hovering-adv-button-bg;
+        text-align: center;
+    }
+}

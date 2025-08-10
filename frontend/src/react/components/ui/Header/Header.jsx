@@ -1,13 +1,22 @@
+import { lazy } from 'react';
 import AuthBtn from '@components/inputs/AuthBtn/AuthBtn';
 import Search from './components/Search/Search';
-import NotificationsContent from '@components/ui/Popups/popapContent/notifications/NotificationsContent';
-import CreateContentPopup from '@components/ui/Popups/popapContent/create/Create';
-import AccountPopup from '@components/ui/Popups/popapContent/account/Account';
+
+const NotificationsContent = lazy(
+    () => import('@components/ui/Popups/popapContent/notifications/NotificationsContent')
+);
+const CreateContentPopup = lazy(() => import('@components/ui/Popups/popapContent/create/Create'));
+const AccountPopup = lazy(() => import('@components/ui/Popups/popapContent/account/Account'));
+
+const LoginContentModal = lazy(
+    () => import('@components/ui/Popups/popapContent/LoginContentModal/LoginContentModal')
+);
+
 import usePopup from '@hooks/usePopup';
 
 import './header.scss';
 
-import LogoLight from '@assets/svg/header/logo_light2.svg?react';
+// import LogoLight from '@assets/svg/header/logo_light2.svg?react';
 import LogoDark from '@assets/svg/header/logo_dark.svg?react';
 import PlusIcon from '@assets/svg/header/plus.svg?react';
 import Bell from '@assets/svg/header/bell.svg?react';
@@ -23,7 +32,7 @@ function Header() {
     };
 
     const openLoginModal = () => {
-        openPopup(<p>test</p>, null, 'modal');
+        openPopup(<LoginContentModal />, null, 'modal');
     };
 
     return (
@@ -52,7 +61,7 @@ function Header() {
                         />
                     </div>
                 ) : (
-                    <AuthBtn onClick={openLoginModal} type={'compact'}>
+                    <AuthBtn onClick={openLoginModal} size="compact" color="red">
                         Войти
                     </AuthBtn>
                 )}

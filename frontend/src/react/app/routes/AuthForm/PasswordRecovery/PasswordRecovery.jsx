@@ -20,6 +20,7 @@ function PasswordRecovery() {
             >
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <Input
+                        variant={'commonV'}
                         label={'email'}
                         placeholder={'Электронная почта'}
                         register={register}
@@ -28,7 +29,7 @@ function PasswordRecovery() {
                         }}
                     />
                     <div style={{ marginTop: '0.8rem' }}>
-                        <AuthBtn type={'full-width'}>Отправить</AuthBtn>
+                        <AuthBtn size="full-width" color="red">Отправить</AuthBtn>
                     </div>
                 </form>
             </AuthBox>

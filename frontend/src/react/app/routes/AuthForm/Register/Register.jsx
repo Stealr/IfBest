@@ -19,6 +19,7 @@ function Register() {
             <AuthBox title={'Регистрация'}>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <Input
+                        variant={'commonV'}
                         label={'name'}
                         placeholder={'Имя пользователя'}
                         register={register}
@@ -27,6 +28,7 @@ function Register() {
                         }}
                     />
                     <Input
+                        variant={'commonV'}
                         label={'email'}
                         placeholder={'Электронная почта'}
                         register={register}
@@ -35,6 +37,7 @@ function Register() {
                         }}
                     />
                     <Input
+                        variant={'commonV'}
                         label={'password'}
                         placeholder={'Пароль'}
                         register={register}
@@ -44,6 +47,7 @@ function Register() {
                         type={'password'}
                     />
                     <Input
+                        variant={'commonV'}
                         label={'conf_password'}
                         placeholder={'Подтверждение пароля'}
                         register={register}
@@ -63,7 +67,7 @@ function Register() {
                         {<Link to={'test'}> пользовательским соглашением</Link>}
                     </Checkbox>
                     <div style={{ marginTop: '0.8rem' }}>
-                        <AuthBtn type={'full-width'}>Регистрация</AuthBtn>
+                        <AuthBtn size="full-width" color="red">Регистрация</AuthBtn>
                     </div>
                 </form>
             </AuthBox>
